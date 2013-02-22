@@ -23,20 +23,20 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.grid;
 
 import java.util.ArrayList;
 
-import com.emitrom.gwt4.touch.client.containers.MessageBox;
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.core.config.XType;
-import com.emitrom.gwt4.touch.client.core.handlers.dataview.DataViewSelectHandler;
-import com.emitrom.gwt4.touch.client.data.Store;
-import com.emitrom.gwt4.touch.client.dataview.DataView;
-import com.emitrom.gwt4.touch.client.layout.FitLayout;
-import com.emitrom.gwt4.touch.ux.grid.client.Grid;
-import com.emitrom.gwt4.touch.ux.grid.client.core.GridColumn;
-import com.emitrom.gwt4.touch.ux.grid.client.core.GridColumnEditor;
-import com.emitrom.gwt4.touch.ux.grid.client.core.GridColumnRenderer;
-import com.emitrom.gwt4.touch.ux.grid.client.core.GridFeature;
 import com.emitrom.gwt4.touch2.demo.client.models.ui.CompanyModel;
-import com.emitrom.platform.util.client.core.BaseModel;
+import com.emitrom.touch4j.client.core.config.XType;
+import com.emitrom.touch4j.client.core.handlers.dataview.DataViewSelectHandler;
+import com.emitrom.touch4j.client.data.BaseModel;
+import com.emitrom.touch4j.client.data.Store;
+import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.DataView;
+import com.emitrom.touch4j.client.ui.MessageBox;
+import com.emitrom.touch4j.client.ui.Panel;
+import com.emitrom.touch4j.ux.grid.client.Grid;
+import com.emitrom.touch4j.ux.grid.client.core.GridColumn;
+import com.emitrom.touch4j.ux.grid.client.core.GridColumnEditor;
+import com.emitrom.touch4j.ux.grid.client.core.GridColumnRenderer;
+import com.emitrom.touch4j.ux.grid.client.core.GridFeature;
 
 public class GridViewImpl extends Panel implements GridView {
 

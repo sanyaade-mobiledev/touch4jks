@@ -42,12 +42,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.charts.scatter.ScatterChartsVie
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.DeviceViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.accelerometer.AccelerometerViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.contacts.ContactsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.general.GeneralViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.geolocation.GeolocationViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.network.NetworkViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.MediaViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.audio.AudioViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.video.VideoViewPlace;
@@ -123,13 +117,6 @@ import com.google.gwt.place.shared.WithTokenizers;
                 RadarChartsViewPlace.Tokenizer.class,
                 ScatterChartsViewPlace.Tokenizer.class, 
                 
-                // Device places
-                DeviceViewPlace.Tokenizer.class,
-                AccelerometerViewPlace.Tokenizer.class,
-                ContactsViewPlace.Tokenizer.class,
-                NetworkViewPlace.Tokenizer.class, 
-                GeneralViewPlace.Tokenizer.class,
-                GeolocationViewPlace.Tokenizer.class
                 })
 
 public interface AppPlaceHistoryMapper extends PlaceHistoryMapper {

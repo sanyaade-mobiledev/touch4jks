@@ -21,7 +21,6 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.core;
 
-import com.emitrom.platform.device.client.core.Device;
 import com.emitrom.gwt4.touch2.demo.client.KitchenSinkService;
 import com.emitrom.gwt4.touch2.demo.client.KitchenSinkServiceAsync;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.AnimationViewImpl;
@@ -41,12 +40,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.charts.scatter.ScatterChartsVie
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.device.DeviceViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.device.accelerometer.AccelerometerViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.device.contacts.ContactsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.device.general.GeneralViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.device.geolocation.GeolocationViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.device.network.NetworkViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.media.MediaViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.media.audio.AudioViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.media.video.VideoViewImpl;
@@ -67,7 +60,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.ui.overlays.OverlaysViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.tabs.TabsViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.toolbars.ToolBarViewImpl;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.rpc.ServiceDefTarget;
 
 public class Util {
 
@@ -95,7 +87,6 @@ public class Util {
     private static OverlaysViewImpl overlayView;
     private static TabsViewImpl tabsView;
     private static ToolBarViewImpl toolbarView;
-    private static DeviceViewImpl deviceView;
     private static DataViewImpl dataView;
     private static GwtRpcViewImpl gwtrpcView;
     private static JsonPViewImpl jsonpView;
@@ -108,11 +99,6 @@ public class Util {
     private static PieChartsViewImpl pieChartView;
     private static RadarChartsViewImpl radarChartView;
     private static ScatterChartsViewImpl scatterChartView;
-    private static NetworkViewImpl networkView;
-    private static GeneralViewImpl generalView;
-    private static AccelerometerViewImpl accelerometerView;
-    private static GeolocationViewImpl geolocationView;
-    private static ContactsViewImpl contactsView;
     private static EditorViewImpl editorsView;
 
     private Util() {
@@ -127,13 +113,6 @@ public class Util {
     
     public static KitchenSinkServiceAsync getService() {
         KitchenSinkServiceAsync service = GWT.create(KitchenSinkService.class);
-        
-        // We must add this check so that the source is viewable from the device
-        if (Device.isReady()) {
-            ServiceDefTarget rpcTarget = (ServiceDefTarget) service;
-            rpcTarget.setServiceEntryPoint("http://go-emitrom.rhcloud.com/touch4j/gwt4touch2_kitchensink/rpc");
-        }
-        
         return service;
     }
 
@@ -348,16 +327,6 @@ public class Util {
         return toolbarView;
     }
     
-    /**
-     * @return the deviceView
-     */
-    public static DeviceViewImpl getDeviceView() {
-        if (deviceView == null) {
-            deviceView = new DeviceViewImpl();
-        }
-        return deviceView;
-    }
-    
     public static DataViewImpl getDataView() {
         if (dataView == null) {
             dataView = new DataViewImpl();
@@ -440,41 +409,6 @@ public class Util {
             scatterChartView = new ScatterChartsViewImpl();
         }
         return scatterChartView;
-    }
-    
-    public static NetworkViewImpl getNetworkView() {
-        if (networkView == null) {
-            networkView = new NetworkViewImpl();
-        }
-        return networkView; 
-    }
-    
-    public static GeneralViewImpl getGeneralView() {
-        if (generalView == null) {
-            generalView = new GeneralViewImpl();
-        }
-        return generalView; 
-    }
-    
-    public static AccelerometerViewImpl getAccelerometerView() {
-        if (accelerometerView == null) {
-            accelerometerView = new AccelerometerViewImpl();
-        }
-        return accelerometerView; 
-    }
-    
-    public static GeolocationViewImpl getGeolocationView() {
-        if (geolocationView == null) {
-            geolocationView = new GeolocationViewImpl();
-        }
-        return geolocationView; 
-    }
-    
-    public static ContactsViewImpl getContactsView() {
-        if (contactsView == null) {
-            contactsView = new ContactsViewImpl();
-        }
-        return contactsView;
     }
     
     public static EditorViewImpl getEditorsView() {

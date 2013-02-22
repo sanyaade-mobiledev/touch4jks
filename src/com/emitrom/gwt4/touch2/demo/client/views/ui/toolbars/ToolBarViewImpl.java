@@ -24,18 +24,18 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.toolbars;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.containers.SegmentedButton;
-import com.emitrom.gwt4.touch.client.containers.ToolBar;
-import com.emitrom.gwt4.touch.client.core.EventObject;
-import com.emitrom.gwt4.touch.client.core.Scroller;
-import com.emitrom.gwt4.touch.client.core.config.Dock;
-import com.emitrom.gwt4.touch.client.core.handlers.button.TapHandler;
-import com.emitrom.gwt4.touch.client.laf.Direction;
-import com.emitrom.gwt4.touch.client.laf.UI;
-import com.emitrom.gwt4.touch.client.layout.FitLayout;
-import com.emitrom.gwt4.touch.client.widgets.Button;
-import com.emitrom.gwt4.touch.client.widgets.Spacer;
+import com.emitrom.touch4j.client.containers.Panel;
+import com.emitrom.touch4j.client.containers.SegmentedButton;
+import com.emitrom.touch4j.client.containers.ToolBar;
+import com.emitrom.touch4j.client.core.EventObject;
+import com.emitrom.touch4j.client.core.Scroller;
+import com.emitrom.touch4j.client.core.config.Dock;
+import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
+import com.emitrom.touch4j.client.laf.Direction;
+import com.emitrom.touch4j.client.laf.UI;
+import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.Button;
+import com.emitrom.touch4j.client.widgets.Spacer;
 
 public class ToolBarViewImpl extends Panel implements ToolBarView {
 

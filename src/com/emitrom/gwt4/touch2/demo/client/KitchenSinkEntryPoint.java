@@ -23,29 +23,28 @@ package com.emitrom.gwt4.touch2.demo.client;
 
 import java.util.Stack;
 
-import com.emitrom.gwt4.touch.client.containers.MessageBox;
-import com.emitrom.gwt4.touch.client.containers.ModalPanel;
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.containers.ToolBar;
-import com.emitrom.gwt4.touch.client.core.EventObject;
-import com.emitrom.gwt4.touch.client.core.Scroller;
-import com.emitrom.gwt4.touch.client.core.TouchEntryPoint;
-import com.emitrom.gwt4.touch.client.core.ViewPort;
-import com.emitrom.gwt4.touch.client.core.config.Dock;
-import com.emitrom.gwt4.touch.client.core.handlers.button.TapHandler;
-import com.emitrom.gwt4.touch.client.laf.Direction;
-import com.emitrom.gwt4.touch.client.laf.UI;
-import com.emitrom.gwt4.touch.client.utils.TouchIcons;
-import com.emitrom.gwt4.touch.client.widgets.Button;
-import com.emitrom.gwt4.touch.client.widgets.LoadMask;
-import com.emitrom.gwt4.touch.client.widgets.Spacer;
 import com.emitrom.gwt4.touch2.demo.client.core.AppActivityMapper;
 import com.emitrom.gwt4.touch2.demo.client.core.AppPlaceHistoryMapper;
 import com.emitrom.gwt4.touch2.demo.client.core.ClientFactory;
 import com.emitrom.gwt4.touch2.demo.client.core.Util;
 import com.emitrom.gwt4.touch2.demo.client.core.events.SourceUpdateEvent;
 import com.emitrom.gwt4.touch2.demo.client.views.navigation.NavigationViewPlace;
-import com.emitrom.platform.device.client.core.Device;
+import com.emitrom.touch4j.client.core.EventObject;
+import com.emitrom.touch4j.client.core.Scroller;
+import com.emitrom.touch4j.client.core.TouchEntryPoint;
+import com.emitrom.touch4j.client.core.config.Dock;
+import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
+import com.emitrom.touch4j.client.laf.Direction;
+import com.emitrom.touch4j.client.laf.UI;
+import com.emitrom.touch4j.client.ui.Button;
+import com.emitrom.touch4j.client.ui.LoadMask;
+import com.emitrom.touch4j.client.ui.MessageBox;
+import com.emitrom.touch4j.client.ui.ModalPanel;
+import com.emitrom.touch4j.client.ui.Panel;
+import com.emitrom.touch4j.client.ui.Spacer;
+import com.emitrom.touch4j.client.ui.ToolBar;
+import com.emitrom.touch4j.client.ui.ViewPort;
+import com.emitrom.touch4j.client.utils.TouchIcons;
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.core.client.GWT;
@@ -150,15 +149,6 @@ public class KitchenSinkEntryPoint extends TouchEntryPoint {
 
         toolBar.setTitle("Home");
         toolBar.setDocked(Dock.TOP);
-
-        // we'll only add the button when we are running in native mode.
-        if (Device.isReady() || !GWT.isScript()) {
-            backButton = new Button("Back");
-            backButton.setUi(UI.BACK);
-            backButton.setIconMask(true);
-            backButton.setVisible(false);
-            toolBar.add(backButton);
-        }
 
         toolBar.add(homeButton);
         toolBar.add(new Spacer());
@@ -293,9 +283,10 @@ public class KitchenSinkEntryPoint extends TouchEntryPoint {
             @Override
             public void onPlaceChange(PlaceChangeEvent event) {
                 stack.add(event.getNewPlace());
-                if (Device.isReady() || !GWT.isScript()) {
-                    backButton.setVisible(stack.size() > 1);
-                }
+                // TODO
+//                if (Device.isReady() || !GWT.isScript()) {
+//                    backButton.setVisible(stack.size() > 1);
+//                }
             }
         });
     }

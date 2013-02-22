@@ -21,18 +21,18 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.media.audio;
 
-import com.emitrom.gwt4.touch.client.containers.MessageBox;
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.core.EventObject;
-import com.emitrom.gwt4.touch.client.core.handlers.button.TapHandler;
-import com.emitrom.gwt4.touch.client.laf.UI;
-import com.emitrom.gwt4.touch.client.layout.Align;
-import com.emitrom.gwt4.touch.client.layout.Pack;
-import com.emitrom.gwt4.touch.client.layout.VBoxLayout;
-import com.emitrom.gwt4.touch.client.utils.Has;
-import com.emitrom.gwt4.touch.client.utils.OS;
-import com.emitrom.gwt4.touch.client.widgets.Audio;
-import com.emitrom.gwt4.touch.client.widgets.Button;
+import com.emitrom.touch4j.client.core.EventObject;
+import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
+import com.emitrom.touch4j.client.laf.UI;
+import com.emitrom.touch4j.client.layout.Align;
+import com.emitrom.touch4j.client.layout.Pack;
+import com.emitrom.touch4j.client.layout.VBoxLayout;
+import com.emitrom.touch4j.client.ui.Audio;
+import com.emitrom.touch4j.client.ui.Button;
+import com.emitrom.touch4j.client.ui.MessageBox;
+import com.emitrom.touch4j.client.ui.Panel;
+import com.emitrom.touch4j.client.utils.Has;
+import com.emitrom.touch4j.client.utils.OS;
 
 public class AudioViewImpl extends Panel implements AudioView {
 

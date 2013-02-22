@@ -21,12 +21,12 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.carousel;
 
-import com.emitrom.gwt4.touch.client.containers.Carousel;
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.laf.Direction;
-import com.emitrom.gwt4.touch.client.laf.UI;
-import com.emitrom.gwt4.touch.client.layout.Align;
-import com.emitrom.gwt4.touch.client.layout.VBoxLayout;
+import com.emitrom.touch4j.client.laf.Direction;
+import com.emitrom.touch4j.client.laf.UI;
+import com.emitrom.touch4j.client.layout.Align;
+import com.emitrom.touch4j.client.layout.VBoxLayout;
+import com.emitrom.touch4j.client.ui.Carousel;
+import com.emitrom.touch4j.client.ui.Panel;
 
 public class CarouselViewImpl extends Panel implements CarouselView {
 

@@ -61,18 +61,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcActivity;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPActivity;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.DeviceActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.device.DeviceViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.accelerometer.AccelerometerActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.device.accelerometer.AccelerometerViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.contacts.ContactsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.device.contacts.ContactsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.general.GeneralActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.device.general.GeneralViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.geolocation.GeolocationActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.device.geolocation.GeolocationViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.network.NetworkActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.device.network.NetworkViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.MediaActivity;
 import com.emitrom.gwt4.touch2.demo.client.views.media.MediaViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.audio.AudioActivity;
@@ -188,8 +176,6 @@ public class AppActivityMapper implements ActivityMapper {
             return new FlipActivity((FlipViewPlace) place, clientFactory);
         if (place instanceof PopViewPlace)
             return new PopActivity((PopViewPlace) place, clientFactory);
-        if (place instanceof DeviceViewPlace)
-            return new DeviceActivity((DeviceViewPlace) place, clientFactory);
         if (place instanceof ChartsViewPlace)
             return new ChartsActivity((ChartsViewPlace) place, clientFactory);
         if (place instanceof AreaChartsViewPlace)
@@ -212,12 +198,6 @@ public class AppActivityMapper implements ActivityMapper {
             return new NetworkActivity((NetworkViewPlace) place, clientFactory);
         if (place instanceof GeneralViewPlace)
             return new GeneralActivity((GeneralViewPlace) place, clientFactory);
-        if (place instanceof AccelerometerViewPlace)
-            return new AccelerometerActivity((AccelerometerViewPlace) place, clientFactory);
-        if (place instanceof GeolocationViewPlace)
-            return new GeolocationActivity((GeolocationViewPlace) place, clientFactory);
-        if (place instanceof ContactsViewPlace)
-            return new ContactsActivity((ContactsViewPlace) place, clientFactory);
         if (place instanceof EditorViewPlace)
             return new EditorActivity((EditorViewPlace) place, clientFactory);
         

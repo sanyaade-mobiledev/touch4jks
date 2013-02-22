@@ -21,27 +21,27 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.pie;
 
-import com.emitrom.gwt4.touch.charts.client.Chart;
-import com.emitrom.gwt4.touch.charts.client.ChartPanel;
-import com.emitrom.gwt4.touch.charts.client.Legend;
-import com.emitrom.gwt4.touch.charts.client.handlers.ItemShowHandler;
-import com.emitrom.gwt4.touch.charts.client.interactions.ChartItem;
-import com.emitrom.gwt4.touch.charts.client.interactions.ItemHighlight;
-import com.emitrom.gwt4.touch.charts.client.interactions.ItemInfo;
-import com.emitrom.gwt4.touch.charts.client.interactions.PieRotate;
-import com.emitrom.gwt4.touch.charts.client.interactions.Reset;
-import com.emitrom.gwt4.touch.charts.client.laf.Label;
-import com.emitrom.gwt4.touch.charts.client.series.PieSeries;
-import com.emitrom.gwt4.touch.charts.client.theme.Theme;
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.core.EventObject;
-import com.emitrom.gwt4.touch.client.core.handlers.button.TapHandler;
-import com.emitrom.gwt4.touch.client.data.Store;
-import com.emitrom.gwt4.touch.client.laf.Position;
-import com.emitrom.gwt4.touch.client.laf.UI;
-import com.emitrom.gwt4.touch.client.utils.TouchIcons;
-import com.emitrom.gwt4.touch.client.widgets.Button;
-import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
+import com.emitrom.touch4j.charts.client.Chart;
+import com.emitrom.touch4j.charts.client.ChartPanel;
+import com.emitrom.touch4j.charts.client.Legend;
+import com.emitrom.touch4j.charts.client.handlers.ItemShowHandler;
+import com.emitrom.touch4j.charts.client.interactions.ChartItem;
+import com.emitrom.touch4j.charts.client.interactions.ItemHighlight;
+import com.emitrom.touch4j.charts.client.interactions.ItemInfo;
+import com.emitrom.touch4j.charts.client.interactions.PieRotate;
+import com.emitrom.touch4j.charts.client.interactions.Reset;
+import com.emitrom.touch4j.charts.client.laf.Label;
+import com.emitrom.touch4j.charts.client.series.PieSeries;
+import com.emitrom.touch4j.charts.client.theme.Theme;
+import com.emitrom.touch4j.client.containers.Panel;
+import com.emitrom.touch4j.client.core.EventObject;
+import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
+import com.emitrom.touch4j.client.data.Store;
+import com.emitrom.touch4j.client.laf.Position;
+import com.emitrom.touch4j.client.laf.UI;
+import com.emitrom.touch4j.client.utils.TouchIcons;
+import com.emitrom.touch4j.client.ui.Button;
+import com.emitrom.touch4j2.demo.client.models.charts.ChartsDataUtil;
 
 public class PieChartsViewImpl extends ChartPanel implements PieChartsView {
 

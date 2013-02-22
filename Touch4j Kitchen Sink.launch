@@ -15,7 +15,7 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="com.google.gdt.eclipse.suite.appengineClasspathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.google.gwt.dev.DevMode"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-server com.google.appengine.tools.development.gwt.AppEngineLauncher -startupUrl index.html -war &quot;/Users/dlamotta/Documents/workspace/Touch4j Kitchen Sink/war&quot; -remoteUI &quot;${gwt_remote_ui_server_port}:${unique_id}&quot; -logLevel INFO -codeServerPort 9997 -port 8888 com.emitrom.gwt4.touch2.demo.GWT4Touch2_KitchenSink"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-server com.google.appengine.tools.development.gwt.AppEngineLauncher -startupUrl index.html -war /backup/git/touch4jks/war -remoteUI &quot;${gwt_remote_ui_server_port}:${unique_id}&quot; -logLevel INFO -codeServerPort 9997 -port 8888 com.emitrom.gwt4.touch2.demo.GWT4Touch2_KitchenSink"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Touch4j Kitchen Sink"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Ddatastore.default_high_rep_job_policy_unapplied_job_pct=50 -javaagent:/Applications/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.6.4.v201203300216r37/appengine-java-sdk-1.6.4/lib/agent/appengine-agent.jar -XstartOnFirstThread -Xmx512m -Xbootclasspath/p:/Applications/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.6.0.v201111171704r37/appengine-java-sdk-1.6.0/lib/override/appengine-dev-jdk-overrides.jar"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-XstartOnFirstThread -Xmx512m -Xbootclasspath/p:/Applications/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.6.0.v201111171704r37/appengine-java-sdk-1.6.0/lib/override/appengine-dev-jdk-overrides.jar"/>
 </launchConfiguration>

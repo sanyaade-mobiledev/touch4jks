@@ -24,18 +24,18 @@ package com.emitrom.gwt4.touch2.demo.client.views.media;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.core.handlers.dataview.DataViewItemTapHandler;
-import com.emitrom.gwt4.touch.client.core.handlers.list.ItemDisclosureHandler;
-import com.emitrom.gwt4.touch.client.data.Store;
-import com.emitrom.gwt4.touch.client.dataview.DataView;
-import com.emitrom.gwt4.touch.client.dataview.DisclosureList;
-import com.emitrom.gwt4.touch.client.layout.FitLayout;
 import com.emitrom.gwt4.touch2.demo.client.models.media.MediaViewModel;
 import com.emitrom.gwt4.touch2.demo.client.views.AppPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.audio.AudioViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.video.VideoViewPlace;
-import com.emitrom.platform.util.client.core.BaseModel;
+import com.emitrom.touch4j.client.core.handlers.dataview.DataViewItemTapHandler;
+import com.emitrom.touch4j.client.core.handlers.list.ItemDisclosureHandler;
+import com.emitrom.touch4j.client.data.BaseModel;
+import com.emitrom.touch4j.client.data.Store;
+import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.DataView;
+import com.emitrom.touch4j.client.ui.DisclosureList;
+import com.emitrom.touch4j.client.ui.Panel;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 

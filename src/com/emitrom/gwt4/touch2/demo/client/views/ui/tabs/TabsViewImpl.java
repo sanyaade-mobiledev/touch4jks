@@ -21,11 +21,11 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.tabs;
 
-import com.emitrom.gwt4.touch.client.containers.TabPanel;
-import com.emitrom.gwt4.touch.client.laf.Alignment;
-import com.emitrom.gwt4.touch.client.laf.UI;
-import com.emitrom.gwt4.touch.client.layout.Pack;
-import com.emitrom.gwt4.touch.client.tab.TabItem;
+import com.emitrom.touch4j.client.containers.TabPanel;
+import com.emitrom.touch4j.client.laf.Alignment;
+import com.emitrom.touch4j.client.laf.UI;
+import com.emitrom.touch4j.client.layout.Pack;
+import com.emitrom.touch4j.client.tab.TabItem;
 
 
 public class TabsViewImpl extends TabPanel implements TabsView {

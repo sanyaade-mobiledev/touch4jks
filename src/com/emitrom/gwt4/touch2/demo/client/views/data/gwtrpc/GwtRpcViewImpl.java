@@ -21,19 +21,19 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc;
 
-import com.emitrom.gwt4.touch.client.containers.MessageBox;
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.containers.ToolBar;
-import com.emitrom.gwt4.touch.client.core.EventObject;
-import com.emitrom.gwt4.touch.client.core.ViewPort;
-import com.emitrom.gwt4.touch.client.core.config.Dock;
-import com.emitrom.gwt4.touch.client.core.handlers.button.TapHandler;
-import com.emitrom.gwt4.touch.client.laf.UI;
-import com.emitrom.gwt4.touch.client.layout.FitLayout;
-import com.emitrom.gwt4.touch.client.widgets.Button;
-import com.emitrom.gwt4.touch.client.widgets.LoadMask;
-import com.emitrom.gwt4.touch2.demo.client.KitchenSinkServiceAsync;
-import com.emitrom.gwt4.touch2.demo.client.core.Util;
+import com.emitrom.touch4j.client.containers.MessageBox;
+import com.emitrom.touch4j.client.containers.Panel;
+import com.emitrom.touch4j.client.containers.ToolBar;
+import com.emitrom.touch4j.client.core.EventObject;
+import com.emitrom.touch4j.client.core.ViewPort;
+import com.emitrom.touch4j.client.core.config.Dock;
+import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
+import com.emitrom.touch4j.client.laf.UI;
+import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.Button;
+import com.emitrom.touch4j.client.widgets.LoadMask;
+import com.emitrom.touch4j2.demo.client.KitchenSinkServiceAsync;
+import com.emitrom.touch4j2.demo.client.core.Util;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public class GwtRpcViewImpl extends Panel implements GwtRpcView {

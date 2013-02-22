@@ -23,27 +23,11 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.maps;
 
 import java.util.ArrayList;
 
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.layout.FitLayout;
-import com.emitrom.gwt4.touch.client.widgets.GoogleMap;
-import com.emitrom.platform.maps.client.GMap;
-import com.emitrom.platform.maps.client.base.LatLng;
-import com.emitrom.platform.maps.client.core.MVCArray;
-import com.emitrom.platform.maps.client.core.MapTypeId;
-import com.emitrom.platform.maps.client.events.InteractionEvent;
-import com.emitrom.platform.maps.client.events.handlers.MapTapHandler;
-import com.emitrom.platform.maps.client.overlays.InfoWindow;
-import com.emitrom.platform.maps.client.overlays.Marker;
-import com.emitrom.platform.maps.client.overlays.Polyline;
-import com.emitrom.platform.maps.client.overlays.options.PolylineOptions;
-import com.emitrom.platform.maps.client.services.TravelMode;
-import com.emitrom.platform.maps.client.services.distancematrix.DistanceMatrixRequest;
-import com.emitrom.platform.maps.client.services.distancematrix.DistanceMatrixResponse;
-import com.emitrom.platform.maps.client.services.distancematrix.DistanceMatrixResponseElement;
-import com.emitrom.platform.maps.client.services.distancematrix.DistanceMatrixResponseRow;
-import com.emitrom.platform.maps.client.services.distancematrix.DistanceMatrixService;
-import com.emitrom.platform.maps.client.services.distancematrix.DistanceMatrixStatus;
-import com.emitrom.platform.maps.client.services.handlers.DistanceMatrixServiceHandler;
+import org.apache.tools.ant.types.Commandline.Marker;
+
+import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.GoogleMap;
+import com.emitrom.touch4j.client.ui.Panel;
 import com.google.gwt.user.client.Timer;
 
 public class MapsViewImpl extends Panel implements MapsView {

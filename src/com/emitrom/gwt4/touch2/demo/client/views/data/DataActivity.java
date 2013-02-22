@@ -25,7 +25,7 @@ import com.emitrom.gwt4.touch2.demo.client.activity.KitchenSinkActivity;
 import com.emitrom.gwt4.touch2.demo.client.core.ClientFactory;
 import com.emitrom.gwt4.touch2.demo.client.core.Util;
 import com.emitrom.gwt4.touch2.demo.client.core.events.SourceUpdateEvent;
-import com.emitrom.gwt4.touch2.demo.client.views.data.DataView.Presenter;
+import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcView.Presenter;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 

@@ -24,7 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.models.charts;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.gwt4.touch.client.data.Store;
+import com.emitrom.touch4j.client.data.Store;
 
 public class ChartsDataUtil {
 

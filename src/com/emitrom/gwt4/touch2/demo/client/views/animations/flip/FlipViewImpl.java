@@ -21,8 +21,8 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.animations.flip;
 
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.layout.FitLayout;
+import com.emitrom.touch4j.client.containers.Panel;
+import com.emitrom.touch4j.client.layout.FitLayout;
 
 public class FlipViewImpl extends Panel implements FlipView {
 

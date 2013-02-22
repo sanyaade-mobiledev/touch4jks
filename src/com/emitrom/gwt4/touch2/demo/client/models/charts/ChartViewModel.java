@@ -21,7 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.models.charts;
 
-import com.emitrom.platform.util.client.core.BaseModel;
+import com.emitrom.touch4j.client.data.BaseModel;
 
 public class ChartViewModel extends BaseModel {
 

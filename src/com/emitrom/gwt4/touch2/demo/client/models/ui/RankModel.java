@@ -23,9 +23,9 @@ package com.emitrom.gwt4.touch2.demo.client.models.ui;
 
 import java.util.ArrayList;
 
-import com.emitrom.gwt4.touch.client.data.Store;
-import com.emitrom.gwt4.touch.client.field.SelectOption;
-import com.emitrom.platform.util.client.core.BaseModel;
+import com.emitrom.touch4j.client.data.BaseModel;
+import com.emitrom.touch4j.client.data.Store;
+import com.emitrom.touch4j.client.ui.SelectOption;
 
 public class RankModel extends BaseModel {
 

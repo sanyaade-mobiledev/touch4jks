@@ -24,21 +24,23 @@ package com.emitrom.gwt4.touch2.demo.client.views.data;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.gwt4.touch.client.containers.Panel;
-import com.emitrom.gwt4.touch.client.core.handlers.dataview.DataViewItemTapHandler;
-import com.emitrom.gwt4.touch.client.core.handlers.list.ItemDisclosureHandler;
-import com.emitrom.gwt4.touch.client.data.Store;
-import com.emitrom.gwt4.touch.client.dataview.DisclosureList;
-import com.emitrom.gwt4.touch.client.layout.FitLayout;
 import com.emitrom.gwt4.touch2.demo.client.models.data.DataViewModel;
 import com.emitrom.gwt4.touch2.demo.client.models.navigation.NavigationViewModel;
+import com.emitrom.gwt4.touch2.demo.client.views.data.DataView.Presenter;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPViewPlace;
-import com.emitrom.platform.util.client.core.BaseModel;
+import com.emitrom.touch4j.client.core.handlers.dataview.DataViewItemTapHandler;
+import com.emitrom.touch4j.client.core.handlers.list.ItemDisclosureHandler;
+import com.emitrom.touch4j.client.data.BaseModel;
+import com.emitrom.touch4j.client.data.Store;
+import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.DataView;
+import com.emitrom.touch4j.client.ui.DisclosureList;
+import com.emitrom.touch4j.client.ui.Panel;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 
-public class DataViewImpl extends Panel implements DataView {
+public class DataViewImpl extends Panel implements Presenter {
 
     private Presenter presenter;
     private GwtRpcViewPlace rpcViewPlace = new GwtRpcViewPlace();
@@ -61,12 +63,12 @@ public class DataViewImpl extends Panel implements DataView {
         DisclosureList list = new DisclosureList(DataViewModel.TEMPLATE, store);
         list.setDeselectOnContainerClick(false);
         list.addItemTapHandler(new DataViewItemTapHandler() {
-            @Override
-            public void onItemTap(com.emitrom.gwt4.touch.client.dataview.DataView dataView, int index, Element element,
-                            BaseModel record, Object eventObject, Object eOpts) {
-                goToPlace(index);                  
-            }
-        });
+			@Override
+			public void onItemTap(DataView dataView, int index, Element element,
+					BaseModel record, Object eventObject, Object eOpts) {
+				goToPlace(index);				
+			}
+		});
         list.setOnItemDisclosure(new ItemDisclosureHandler() {
 
             @Override

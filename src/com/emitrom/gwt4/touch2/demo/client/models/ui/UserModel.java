@@ -24,7 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.models.ui;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.platform.util.client.core.BaseModel;
+import com.emitrom.touch4j.client.data.BaseModel;
 
 public class UserModel extends BaseModel {
 
