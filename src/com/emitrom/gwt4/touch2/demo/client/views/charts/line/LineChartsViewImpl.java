@@ -21,7 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.line;
 
-import com.emitrom.touch4j.charts.client.Chart;
+import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
 import com.emitrom.touch4j.charts.client.HighLight;
 import com.emitrom.touch4j.charts.client.Legend;
 import com.emitrom.touch4j.charts.client.axis.CategoryAxis;
@@ -31,25 +31,24 @@ import com.emitrom.touch4j.charts.client.interactions.ChartItem;
 import com.emitrom.touch4j.charts.client.interactions.ItemInfo;
 import com.emitrom.touch4j.charts.client.interactions.PanZoom;
 import com.emitrom.touch4j.charts.client.laf.GridConfig;
-import com.emitrom.touch4j.charts.client.laf.SpriteConfig;
 import com.emitrom.touch4j.charts.client.marker.Circle;
 import com.emitrom.touch4j.charts.client.marker.Cross;
 import com.emitrom.touch4j.charts.client.series.LineSeries;
-import com.emitrom.touch4j.client.containers.Panel;
-import com.emitrom.touch4j.client.containers.ToolBar;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.data.Store;
+import com.emitrom.touch4j.client.draw.SpriteConfig;
 import com.emitrom.touch4j.client.laf.Alignment;
 import com.emitrom.touch4j.client.laf.Color;
 import com.emitrom.touch4j.client.laf.Position;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.FitLayout;
-import com.emitrom.touch4j.client.utils.TouchIcons;
 import com.emitrom.touch4j.client.ui.Button;
-import com.emitrom.touch4j.client.widgets.Spacer;
-import com.emitrom.touch4j2.demo.client.models.charts.ChartsDataUtil;
+import com.emitrom.touch4j.client.ui.Panel;
+import com.emitrom.touch4j.client.ui.Spacer;
+import com.emitrom.touch4j.client.ui.ToolBar;
+import com.emitrom.touch4j.client.utils.TouchIcons;
 
 public class LineChartsViewImpl extends Panel implements LineChartsView {
 

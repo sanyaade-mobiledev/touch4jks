@@ -119,7 +119,8 @@ public class KitchenSinkEntryPoint extends TouchEntryPoint {
         srcPanel.setHeight("85%");
         srcPanel.setStyleHtmlContent(true);
         Scroller scroller = new Scroller();
-        scroller.setDirection(Direction.BOTH);
+        // TODO
+//        scroller.setDirection(Direction.BOTH);
         srcPanel.setScroller(scroller);
         srcPanel.setHideOnMaskTap(true);
         srcPanel.setModal(true);

@@ -89,8 +89,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.ui.icons.IconsActivity;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.icons.IconsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.lists.ListsActivity;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.lists.ListsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.ui.maps.MapsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.ui.maps.MapsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.nestedlists.NestedListsActivity;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.nestedlists.NestedListsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.overlays.OverlaysActivity;
@@ -132,8 +130,6 @@ public class AppActivityMapper implements ActivityMapper {
             return new ListsActivity((ListsViewPlace) place, clientFactory);
         if (place instanceof FormsViewPlace)
             return new FormsActivity((FormsViewPlace) place, clientFactory);
-        if (place instanceof MapsViewPlace)
-            return new MapsActivity((MapsViewPlace) place, clientFactory);
         if (place instanceof ButtonsViewPlace)
             return new ButtonsActivity((ButtonsViewPlace) place, clientFactory);
         if (place instanceof ThemeViewPlace)
@@ -194,10 +190,6 @@ public class AppActivityMapper implements ActivityMapper {
             return new RadarChartsActivity((RadarChartsViewPlace) place, clientFactory);
         if (place instanceof ScatterChartsViewPlace)
             return new ScatterChartsActivity((ScatterChartsViewPlace) place, clientFactory);
-        if (place instanceof NetworkViewPlace)
-            return new NetworkActivity((NetworkViewPlace) place, clientFactory);
-        if (place instanceof GeneralViewPlace)
-            return new GeneralActivity((GeneralViewPlace) place, clientFactory);
         if (place instanceof EditorViewPlace)
             return new EditorActivity((EditorViewPlace) place, clientFactory);
         

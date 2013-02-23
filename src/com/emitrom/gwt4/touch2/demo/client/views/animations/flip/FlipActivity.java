@@ -21,17 +21,16 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.animations.flip;
 
-import com.emitrom.touch4j.client.core.ViewPort;
+import com.emitrom.gwt4.touch2.demo.client.activity.KitchenSinkActivity;
+import com.emitrom.gwt4.touch2.demo.client.core.ClientFactory;
+import com.emitrom.gwt4.touch2.demo.client.core.Util;
+import com.emitrom.gwt4.touch2.demo.client.core.events.SourceUpdateEvent;
 import com.emitrom.touch4j.client.fx.layout.card.Flip;
-import com.emitrom.touch4j2.demo.client.activity.KitchenSinkActivity;
-import com.emitrom.touch4j2.demo.client.core.ClientFactory;
-import com.emitrom.touch4j2.demo.client.core.Util;
-import com.emitrom.touch4j2.demo.client.core.events.SourceUpdateEvent;
-import com.emitrom.touch4j2.demo.client.views.animations.flip.FlipView.Presenter;
+import com.emitrom.touch4j.client.ui.ViewPort;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
-public class FlipActivity extends KitchenSinkActivity implements Presenter {
+public class FlipActivity extends KitchenSinkActivity implements FlipView.Presenter {
 
     public FlipActivity(FlipViewPlace place, ClientFactory clientFactory) {
         this.clientFactory = clientFactory;

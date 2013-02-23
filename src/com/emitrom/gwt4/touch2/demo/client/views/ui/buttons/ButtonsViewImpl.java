@@ -21,13 +21,13 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.buttons;
 
-import com.emitrom.touch4j.client.containers.Panel;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Align;
 import com.emitrom.touch4j.client.layout.HBoxLayout;
 import com.emitrom.touch4j.client.layout.Pack;
 import com.emitrom.touch4j.client.layout.VBoxLayout;
 import com.emitrom.touch4j.client.ui.Button;
+import com.emitrom.touch4j.client.ui.Panel;
 
 
 public class ButtonsViewImpl extends Panel implements ButtonsView {

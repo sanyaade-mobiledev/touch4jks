@@ -28,7 +28,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Properties;
 
-import com.emitrom.touch4j2.demo.client.KitchenSinkService;
+import com.emitrom.gwt4.touch2.demo.client.KitchenSinkService;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**

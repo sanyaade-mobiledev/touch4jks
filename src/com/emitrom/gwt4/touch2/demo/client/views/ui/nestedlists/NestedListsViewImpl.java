@@ -24,13 +24,13 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.nestedlists;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.touch4j.client.containers.Panel;
-import com.emitrom.touch4j.client.core.Container;
 import com.emitrom.touch4j.client.core.handlers.component.RenderChangeHandler;
 import com.emitrom.touch4j.client.data.TreeModel;
 import com.emitrom.touch4j.client.data.TreeStore;
-import com.emitrom.touch4j.client.dataview.NestedListDataView;
 import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.Container;
+import com.emitrom.touch4j.client.ui.NestedListDataView;
+import com.emitrom.touch4j.client.ui.Panel;
 
 public class NestedListsViewImpl extends Panel implements NestedListsView {
 

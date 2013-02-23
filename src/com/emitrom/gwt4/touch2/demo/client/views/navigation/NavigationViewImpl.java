@@ -29,7 +29,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.AppPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.AnimationViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.charts.ChartsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.device.DeviceViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.MediaViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.themes.ThemeViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.UIViewPlace;
@@ -52,7 +51,6 @@ public class NavigationViewImpl extends Panel implements NavigationView {
     private DataViewPlace dataViewPlace = new DataViewPlace();
     private AppPlace themeViewPlace = new ThemeViewPlace();
     private AppPlace mediaViewPlace = new MediaViewPlace();
-    private AppPlace deviceViewPlace = new DeviceViewPlace();
     private AppPlace chartsPlace = new ChartsViewPlace();
 
     public NavigationViewImpl() {
@@ -101,11 +99,6 @@ public class NavigationViewImpl extends Panel implements NavigationView {
         modelNames.add(themeViewPlace.getToken());
         modelNames.add(chartsPlace.getToken());
 
-        // We want to see how the UI looks in dev mode also
-        if (Device.isReady()) {
-            modelNames.add(deviceViewPlace.getToken());
-        }
-
         String[] list = modelNames.toArray(new String[0]);
 
         List<NavigationViewModel> models = new ArrayList<NavigationViewModel>();
@@ -136,9 +129,6 @@ public class NavigationViewImpl extends Panel implements NavigationView {
                 break;
             case 5:
                 presenter.goTo(chartsPlace);
-                break;
-            case 6:
-                presenter.goTo(deviceViewPlace);
                 break;
 
             default:

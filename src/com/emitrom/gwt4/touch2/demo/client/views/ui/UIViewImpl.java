@@ -34,7 +34,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.ui.form.FormsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.grid.GridViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.icons.IconsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.lists.ListsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.ui.maps.MapsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.nestedlists.NestedListsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.overlays.OverlaysViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.tabs.TabsViewPlace;
@@ -52,122 +51,122 @@ import com.google.gwt.user.client.Element;
 
 public class UIViewImpl extends Panel implements UIView {
 
-    private Presenter presenter;
-    private AppPlace buttonsViewPlace = new ButtonsViewPlace();
-    private AppPlace formsViewPlace = new FormsViewPlace();
-    private AppPlace listsViewPlace = new ListsViewPlace();
-    private AppPlace nestedListsViewPlace = new NestedListsViewPlace();
-    private AppPlace iconsViewPlace = new IconsViewPlace();
-    private AppPlace toolBarViewPlace = new ToolBarViewPlace();
-    private AppPlace carouselViewPlace = new CarouselViewPlace();
-    private AppPlace tabsViewPlace = new TabsViewPlace();
-    private AppPlace bottomTabsViewPlace = new BottomTabsViewPlace();
-    private AppPlace mapsViewPlace = new MapsViewPlace();
-    private AppPlace overlaysViewPlace = new OverlaysViewPlace();
-    private AppPlace gridViewPlace = new GridViewPlace();
-    private AppPlace editorViewPlace = new EditorViewPlace();
+	private Presenter presenter;
+	private AppPlace buttonsViewPlace = new ButtonsViewPlace();
+	private AppPlace formsViewPlace = new FormsViewPlace();
+	private AppPlace listsViewPlace = new ListsViewPlace();
+	private AppPlace nestedListsViewPlace = new NestedListsViewPlace();
+	private AppPlace iconsViewPlace = new IconsViewPlace();
+	private AppPlace toolBarViewPlace = new ToolBarViewPlace();
+	private AppPlace carouselViewPlace = new CarouselViewPlace();
+	private AppPlace tabsViewPlace = new TabsViewPlace();
+	private AppPlace bottomTabsViewPlace = new BottomTabsViewPlace();
+	private AppPlace overlaysViewPlace = new OverlaysViewPlace();
+	private AppPlace gridViewPlace = new GridViewPlace();
+	private AppPlace editorViewPlace = new EditorViewPlace();
 
-    public UIViewImpl() {
-        setLayout(new FitLayout());
-        initialize();
-    }
+	public UIViewImpl() {
+		setLayout(new FitLayout());
+		initialize();
+	}
 
-    @Override
-    public void setPresenter(Presenter presenter) {
-        this.presenter = presenter;
-    }
+	@Override
+	public void setPresenter(Presenter presenter) {
+		this.presenter = presenter;
+	}
 
-    private void initialize() {
+	private void initialize() {
 
-        final Store store = new Store(getUIViewModels());
-        store.setSorter(UIViewModel.KEY);
-        DisclosureList list = new DisclosureList(UIViewModel.TEMPLATE, store);
-        list.setDeselectOnContainerClick(false);
-        list.addItemTapHandler(new DataViewItemTapHandler() {
+		final Store store = new Store(getUIViewModels());
+		store.setSorter(UIViewModel.KEY);
+		DisclosureList list = new DisclosureList(UIViewModel.TEMPLATE, store);
+		list.setDeselectOnContainerClick(false);
+		list.addItemTapHandler(new DataViewItemTapHandler() {
 
-            @Override
-            public void onItemTap(DataView dataView, int index, Element element, BaseModel record, Object eventObject,
-                            Object eOpts) {
-                goToPlace(index);
-            }
-        });
-        list.setOnItemDisclosure(new ItemDisclosureHandler() {
+			@Override
+			public void onItemTap(DataView dataView, int index,
+					Element element, BaseModel record, Object eventObject,
+					Object eOpts) {
+				goToPlace(index);
+			}
+		});
+		list.setOnItemDisclosure(new ItemDisclosureHandler() {
 
-            @Override
-            public void onItemDisclosure(BaseModel record, JavaScriptObject node, int index) {
-                goToPlace(index);
-            }
-        });
+			@Override
+			public void onItemDisclosure(BaseModel record,
+					JavaScriptObject node, int index) {
+				goToPlace(index);
+			}
+		});
 
-        add(list);
+		add(list);
 
-    }
+	}
 
-    private List<UIViewModel> getUIViewModels() {
+	private List<UIViewModel> getUIViewModels() {
 
-        String[] uiItems = {
-                        buttonsViewPlace.getToken(), formsViewPlace.getToken(), listsViewPlace.getToken(),
-                        nestedListsViewPlace.getToken(), iconsViewPlace.getToken(), toolBarViewPlace.getToken(),
-                        carouselViewPlace.getToken(), tabsViewPlace.getToken(), bottomTabsViewPlace.getToken(),
-                        mapsViewPlace.getToken(), overlaysViewPlace.getToken(), gridViewPlace.getToken(), editorViewPlace.getToken()};
+		String[] uiItems = { buttonsViewPlace.getToken(),
+				formsViewPlace.getToken(), listsViewPlace.getToken(),
+				nestedListsViewPlace.getToken(), iconsViewPlace.getToken(),
+				toolBarViewPlace.getToken(), carouselViewPlace.getToken(),
+				tabsViewPlace.getToken(), bottomTabsViewPlace.getToken(),
+				overlaysViewPlace.getToken(), gridViewPlace.getToken(),
+				editorViewPlace.getToken() };
 
-        List<UIViewModel> models = new ArrayList<UIViewModel>();
+		List<UIViewModel> models = new ArrayList<UIViewModel>();
 
-        for (String uiItem : uiItems) {
-            models.add(new UIViewModel(uiItem));
-        }
+		for (String uiItem : uiItems) {
+			models.add(new UIViewModel(uiItem));
+		}
 
-        return models;
+		return models;
 
-    }
+	}
 
-    private void goToPlace(int index) {
+	private void goToPlace(int index) {
 
-        switch (index) {
-            case 0:
-                presenter.goTo(buttonsViewPlace);
-                break;
-            case 1:
-                presenter.goTo(formsViewPlace);
-                break;
-            case 2:
-                presenter.goTo(listsViewPlace);
-                break;
-            case 3:
-                presenter.goTo(nestedListsViewPlace);
-                break;
-            case 4:
-                presenter.goTo(iconsViewPlace);
-                break;
-            case 5:
-                presenter.goTo(toolBarViewPlace);
-                break;
-            case 6:
-                presenter.goTo(carouselViewPlace);
-                break;
-            case 7:
-                presenter.goTo(tabsViewPlace);
-                break;
-            case 8:
-                presenter.goTo(bottomTabsViewPlace);
-                break;
-            case 9:
-                presenter.goTo(mapsViewPlace);
-                break;
-            case 10:
-                presenter.goTo(overlaysViewPlace);
-                break;
-            case 11:
-                presenter.goTo(gridViewPlace);
-                break;
-            case 12:
-                presenter.goTo(editorViewPlace);
-                break;
+		switch (index) {
+		case 0:
+			presenter.goTo(buttonsViewPlace);
+			break;
+		case 1:
+			presenter.goTo(formsViewPlace);
+			break;
+		case 2:
+			presenter.goTo(listsViewPlace);
+			break;
+		case 3:
+			presenter.goTo(nestedListsViewPlace);
+			break;
+		case 4:
+			presenter.goTo(iconsViewPlace);
+			break;
+		case 5:
+			presenter.goTo(toolBarViewPlace);
+			break;
+		case 6:
+			presenter.goTo(carouselViewPlace);
+			break;
+		case 7:
+			presenter.goTo(tabsViewPlace);
+			break;
+		case 8:
+			presenter.goTo(bottomTabsViewPlace);
+			break;
+		case 9:
+			presenter.goTo(overlaysViewPlace);
+			break;
+		case 10:
+			presenter.goTo(gridViewPlace);
+			break;
+		case 11:
+			presenter.goTo(editorViewPlace);
+			break;
 
-            default:
-                break;
-        }
+		default:
+			break;
+		}
 
-    }
+	}
 
 }

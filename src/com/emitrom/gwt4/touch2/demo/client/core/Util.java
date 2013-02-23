@@ -54,7 +54,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.ui.form.FormsViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.grid.GridViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.icons.IconsViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.lists.ListsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.ui.maps.MapsViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.nestedlists.NestedListsViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.overlays.OverlaysViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.tabs.TabsViewImpl;
@@ -82,7 +81,6 @@ public class Util {
     private static GridViewImpl gridView;
     private static IconsViewImpl iconsView;
     private static ListsViewImpl listView;
-    private static MapsViewImpl mapsView;
     private static NestedListsViewImpl nestedListView;
     private static OverlaysViewImpl overlayView;
     private static TabsViewImpl tabsView;
@@ -275,16 +273,6 @@ public class Util {
             listView = new ListsViewImpl();
         }
         return listView;
-    }
-
-    /**
-     * @return the mapsView
-     */
-    public static MapsViewImpl getMapsView() {
-        if (mapsView == null) {
-            mapsView = new MapsViewImpl();
-        }
-        return mapsView;
     }
 
     /**

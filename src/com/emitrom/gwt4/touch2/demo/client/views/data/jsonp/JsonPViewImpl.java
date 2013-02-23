@@ -21,17 +21,17 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.data.jsonp;
 
-import com.emitrom.touch4j.client.containers.MessageBox;
-import com.emitrom.touch4j.client.containers.Panel;
-import com.emitrom.touch4j.client.containers.ToolBar;
 import com.emitrom.touch4j.client.core.EventObject;
-import com.emitrom.touch4j.client.core.ViewPort;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.FitLayout;
 import com.emitrom.touch4j.client.ui.Button;
-import com.emitrom.touch4j.client.widgets.LoadMask;
+import com.emitrom.touch4j.client.ui.LoadMask;
+import com.emitrom.touch4j.client.ui.MessageBox;
+import com.emitrom.touch4j.client.ui.Panel;
+import com.emitrom.touch4j.client.ui.ToolBar;
+import com.emitrom.touch4j.client.ui.ViewPort;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.jsonp.client.JsonpRequestBuilder;

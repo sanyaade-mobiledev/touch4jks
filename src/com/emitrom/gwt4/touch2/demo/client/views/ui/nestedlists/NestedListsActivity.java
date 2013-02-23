@@ -25,11 +25,10 @@ import com.emitrom.gwt4.touch2.demo.client.activity.KitchenSinkActivity;
 import com.emitrom.gwt4.touch2.demo.client.core.ClientFactory;
 import com.emitrom.gwt4.touch2.demo.client.core.Util;
 import com.emitrom.gwt4.touch2.demo.client.core.events.SourceUpdateEvent;
-import com.emitrom.gwt4.touch2.demo.client.views.animations.AnimationView.Presenter;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
-public class NestedListsActivity extends KitchenSinkActivity implements Presenter {
+public class NestedListsActivity extends KitchenSinkActivity implements NestedListsView.Presenter {
 
     public NestedListsActivity(NestedListsViewPlace place, ClientFactory clientFactory) {
         this.clientFactory = clientFactory;

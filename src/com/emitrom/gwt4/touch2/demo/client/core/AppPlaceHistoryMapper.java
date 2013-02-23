@@ -56,7 +56,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.ui.form.FormsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.grid.GridViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.icons.IconsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.lists.ListsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.ui.maps.MapsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.nestedlists.NestedListsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.overlays.OverlaysViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.tabs.TabsViewPlace;
@@ -72,7 +71,6 @@ import com.google.gwt.place.shared.WithTokenizers;
                 UIViewPlace.Tokenizer.class, 
                 ListsViewPlace.Tokenizer.class, 
                 FormsViewPlace.Tokenizer.class, 
-                MapsViewPlace.Tokenizer.class,
                 ButtonsViewPlace.Tokenizer.class, 
                 ThemeViewPlace.Tokenizer.class, 
                 BottomTabsViewPlace.Tokenizer.class,

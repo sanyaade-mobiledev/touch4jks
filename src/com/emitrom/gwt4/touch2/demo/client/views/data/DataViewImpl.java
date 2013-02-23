@@ -40,76 +40,79 @@ import com.emitrom.touch4j.client.ui.Panel;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 
-public class DataViewImpl extends Panel implements Presenter {
+public class DataViewImpl extends Panel implements
+		com.emitrom.gwt4.touch2.demo.client.views.data.DataView.Presenter {
 
-    private Presenter presenter;
-    private GwtRpcViewPlace rpcViewPlace = new GwtRpcViewPlace();
-    private JsonPViewPlace jsonpViewPlace = new JsonPViewPlace();
+	private Presenter presenter;
+	private GwtRpcViewPlace rpcViewPlace = new GwtRpcViewPlace();
+	private JsonPViewPlace jsonpViewPlace = new JsonPViewPlace();
 
-    public DataViewImpl() {
-        setLayout(new FitLayout());
-        initialize();
-    }
+	public DataViewImpl() {
+		setLayout(new FitLayout());
+		initialize();
+	}
 
-    @Override
-    public void setPresenter(Presenter presenter) {
-        this.presenter = presenter;
-    }
+	@Override
+	public void setPresenter(Presenter presenter) {
+		this.presenter = presenter;
+	}
 
-    private void initialize() {
+	private void initialize() {
 
-        final Store store = new Store(getDataViewModels());
-        store.setSorter(NavigationViewModel.KEY);
-        DisclosureList list = new DisclosureList(DataViewModel.TEMPLATE, store);
-        list.setDeselectOnContainerClick(false);
-        list.addItemTapHandler(new DataViewItemTapHandler() {
+		final Store store = new Store(getDataViewModels());
+		store.setSorter(NavigationViewModel.KEY);
+		DisclosureList list = new DisclosureList(DataViewModel.TEMPLATE, store);
+		list.setDeselectOnContainerClick(false);
+		list.addItemTapHandler(new DataViewItemTapHandler() {
 			@Override
-			public void onItemTap(DataView dataView, int index, Element element,
-					BaseModel record, Object eventObject, Object eOpts) {
-				goToPlace(index);				
+			public void onItemTap(DataView dataView, int index,
+					Element element, BaseModel record, Object eventObject,
+					Object eOpts) {
+				goToPlace(index);
 			}
 		});
-        list.setOnItemDisclosure(new ItemDisclosureHandler() {
+		list.setOnItemDisclosure(new ItemDisclosureHandler() {
 
-            @Override
-            public void onItemDisclosure(BaseModel record, JavaScriptObject node, int index) {
-                goToPlace(index);                
-            }
-        });
+			@Override
+			public void onItemDisclosure(BaseModel record,
+					JavaScriptObject node, int index) {
+				goToPlace(index);
+			}
+		});
 
-        add(list);
+		add(list);
 
-    }
+	}
 
-    private List<DataViewModel> getDataViewModels() {
+	private List<DataViewModel> getDataViewModels() {
 
-        List<String> modelNames = new ArrayList<String>();
-        modelNames.add(rpcViewPlace.getToken());
-        modelNames.add(jsonpViewPlace.getToken());
-        
-        String[] list = modelNames.toArray(new String[0]);
+		List<String> modelNames = new ArrayList<String>();
+		modelNames.add(rpcViewPlace.getToken());
+		modelNames.add(jsonpViewPlace.getToken());
 
-        List<DataViewModel> models = new ArrayList<DataViewModel>();
-        for (String item : list) {
-            models.add(new DataViewModel(item));
-        }
+		String[] list = modelNames.toArray(new String[0]);
 
-        return models;
+		List<DataViewModel> models = new ArrayList<DataViewModel>();
+		for (String item : list) {
+			models.add(new DataViewModel(item));
+		}
 
-    }
+		return models;
 
-    private void goToPlace(int index) {
-        switch (index) {
-        case 0:
-            presenter.goTo(rpcViewPlace);
-            break;
-        case 1:
-            presenter.goTo(jsonpViewPlace);
-            break;
-        default:
-            break;
-        }
+	}
 
-    }
+	private void goToPlace(int index) {
+		switch (index) {
+		case 0:
+			presenter.goTo(rpcViewPlace);
+			break;
+		case 1:
+			presenter.goTo(jsonpViewPlace);
+			break;
+		default:
+			break;
+		}
+
+	}
 
 }

@@ -21,16 +21,16 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.icons;
 
-import com.emitrom.touch4j.client.containers.TabPanel;
-import com.emitrom.touch4j.client.containers.ToolBar;
 import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Pack;
-import com.emitrom.touch4j.client.tab.TabItem;
-import com.emitrom.touch4j.client.utils.TouchIcons;
 import com.emitrom.touch4j.client.ui.Button;
+import com.emitrom.touch4j.client.ui.TabItem;
+import com.emitrom.touch4j.client.ui.TabPanel;
+import com.emitrom.touch4j.client.ui.ToolBar;
+import com.emitrom.touch4j.client.utils.TouchIcons;
 
 public class IconsViewImpl extends TabPanel implements IconsView {
 
@@ -56,7 +56,8 @@ public class IconsViewImpl extends TabPanel implements IconsView {
         topToolBar.getLayout().setPack(Pack.CENTER);
 
         Scroller toolBarscroller = new Scroller();
-        toolBarscroller.setDirection(Direction.HORIZONTAL);
+        // TODO
+//        toolBarscroller.setDirection(Direction.HORIZONTAL);
 
         topToolBar.setScroller(toolBarscroller);
 
@@ -162,7 +163,8 @@ public class IconsViewImpl extends TabPanel implements IconsView {
          * Bottom Tab Items
          */
         Scroller tabBarscroller = new Scroller();
-        tabBarscroller.setDirection(Direction.HORIZONTAL);
+        // TODO
+//        tabBarscroller.setDirection(Direction.HORIZONTAL);
 
         getTabBar().getLayout().setPack(Pack.CENTER);
         getTabBar().setScroller(tabBarscroller);

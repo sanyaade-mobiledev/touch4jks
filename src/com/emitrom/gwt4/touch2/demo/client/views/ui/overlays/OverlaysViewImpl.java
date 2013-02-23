@@ -116,7 +116,8 @@ public class OverlaysViewImpl extends Panel implements OverlaysView {
 		overlayPanel.setSize(300, 200);
 		overlayPanel.setStyleHtmlContent(true);
 		Scroller scroller = new Scroller();
-		scroller.setDirection(Direction.BOTH);
+		// TODO
+//		scroller.setDirection(Direction.BOTH);
 		overlayPanel.setScroller(scroller);
 		overlayPanel.setHideOnMaskTap(true);
 		overlayPanel.setModal(true);

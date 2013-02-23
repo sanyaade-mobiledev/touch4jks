@@ -21,8 +21,8 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.animations.pop;
 
-import com.emitrom.touch4j.client.containers.Panel;
 import com.emitrom.touch4j.client.layout.FitLayout;
+import com.emitrom.touch4j.client.ui.Panel;
 
 public class PopViewImpl extends Panel implements PopView {
 

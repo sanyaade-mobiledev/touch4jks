@@ -21,12 +21,11 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.bottomtabs;
 
-import com.emitrom.touch4j.client.containers.TabPanel;
 import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.config.Dock;
-import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.layout.Pack;
-import com.emitrom.touch4j.client.tab.TabItem;
+import com.emitrom.touch4j.client.ui.TabItem;
+import com.emitrom.touch4j.client.ui.TabPanel;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
 public class BottomTabsViewImpl extends TabPanel implements BottomTabsView {
@@ -46,7 +45,8 @@ public class BottomTabsViewImpl extends TabPanel implements BottomTabsView {
     private void initialize() {
 
         Scroller tabBarscroller = new Scroller();
-        tabBarscroller.setDirection(Direction.HORIZONTAL);
+        // TODO
+//        tabBarscroller.setDirection(Direction.HORIZONTAL);
 
         getTabBar().getLayout().setPack(Pack.CENTER);
         getTabBar().setScroller(tabBarscroller);

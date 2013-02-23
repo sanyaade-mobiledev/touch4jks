@@ -24,18 +24,17 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.toolbars;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.touch4j.client.containers.Panel;
-import com.emitrom.touch4j.client.containers.SegmentedButton;
-import com.emitrom.touch4j.client.containers.ToolBar;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
-import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.FitLayout;
 import com.emitrom.touch4j.client.ui.Button;
-import com.emitrom.touch4j.client.widgets.Spacer;
+import com.emitrom.touch4j.client.ui.Panel;
+import com.emitrom.touch4j.client.ui.SegmentedButton;
+import com.emitrom.touch4j.client.ui.Spacer;
+import com.emitrom.touch4j.client.ui.ToolBar;
 
 public class ToolBarViewImpl extends Panel implements ToolBarView {
 
@@ -67,7 +66,8 @@ public class ToolBarViewImpl extends Panel implements ToolBarView {
         toolBar.setDocked(Dock.TOP);
         
         Scroller scroller = new Scroller();
-        scroller.setDirection(Direction.HORIZONTAL);
+        // TODO Implement enum for core
+//        scroller.setDirection(Direction.HORIZONTAL);
         
         toolBar.setScroller(scroller);
         

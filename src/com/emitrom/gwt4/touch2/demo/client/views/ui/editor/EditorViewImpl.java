@@ -163,7 +163,7 @@ public class EditorViewImpl extends FormPanel implements Editor<Person>, EditorV
 		select.setLabel("Rank");
 
 		birthday = new DatePicker();
-		birthday.setLabel("Birthday");
+		birthday.setTitle("Birthday");
 
 		wallet = new NumberField<Double>();
 		wallet.setLabel("Wallet");
