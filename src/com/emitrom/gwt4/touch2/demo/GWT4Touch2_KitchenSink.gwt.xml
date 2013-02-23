@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='gwt4touch2_kitchensink'>
+
 	<inherits name='com.google.gwt.user.UserAgent' />
 	<inherits name='com.google.gwt.user.User' />
 	<inherits name="com.google.gwt.activity.Activity" />
     <inherits name="com.google.gwt.logging.Logging" />
     <inherits name='com.google.web.bindery.autobean.AutoBean' />
-	<inherits name="com.emitrom.gwt4.touch.Touch4j" />
-	<inherits name='com.emitrom.platform.maps.Maps' />
-	<inherits name='com.emitrom.platform.device.Device' />
-    <inherits name='com.emitrom.gwt4.touch.charts.Charts' />
-    <inherits name='com.emitrom.gwt4.touch.ux.grid.Grid' />
-    <inherits name='com.emitrom.gwt4.touch.ux.dataview.pullrefresh.PullRefresh' />
-    <inherits name="com.emitrom.gwt4.touch.ux.rating.Rating" />
+    
+	<inherits name="com.emitrom.touch4j.Touch4j" />
+    <inherits name="com.emitrom.touch4j.charts.Charts" />
+    <inherits name="com.emitrom.touch4j.ux.grid.Grid" />
+    <inherits name="com.emitrom.touch4j.ux.dataview.pullrefresh.PullRefresh" />
+    <inherits name="com.emitrom.touch4j.ux.rating.Rating" />
     	
 	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
 	<set-property name="gwt.logging.logLevel" value="SEVERE" />
