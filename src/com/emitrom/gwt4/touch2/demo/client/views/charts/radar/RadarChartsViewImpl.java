@@ -21,19 +21,15 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.radar;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
-import com.emitrom.touch4j.charts.client.Legend;
 import com.emitrom.touch4j.charts.client.axis.RadialAxis;
-import com.emitrom.touch4j.charts.client.interactions.PieRotate;
-import com.emitrom.touch4j.charts.client.interactions.Reset;
 import com.emitrom.touch4j.charts.client.laf.Label;
 import com.emitrom.touch4j.charts.client.series.RadarSeries;
-import com.emitrom.touch4j.charts.client.theme.Theme;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.data.Store;
-import com.emitrom.touch4j.client.laf.Position;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.FitLayout;
 import com.emitrom.touch4j.client.ui.Button;
@@ -42,7 +38,7 @@ import com.emitrom.touch4j.client.ui.Spacer;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class RadarChartsViewImpl extends Panel implements RadarChartsView {
+public class RadarChartsViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;
@@ -78,19 +74,19 @@ public class RadarChartsViewImpl extends Panel implements RadarChartsView {
         toolBar.add(new Spacer());
         toolBar.add(button);
 
-        Chart chart = new Chart(store);
-        chart.setTheme(Theme.DEFAULT);
-        chart.setThemeCls("radar1");
-        chart.setAnimate(true);
-        chart.setInsetPadding(20);
-        chart.setLegend(new Legend(Position.LEFT));
-        chart.setInteractions(new Reset(), new PieRotate());
+//        Chart chart = new Chart(store);
+//        chart.setTheme(Theme.DEFAULT);
+//        chart.setThemeCls("radar1");
+//        chart.setAnimate(true);
+//        chart.setInsetPadding(20);
+//        chart.setLegend(new Legend(Position.LEFT));
+//        chart.setInteractions(new Reset(), new PieRotate());
 
         RadialAxis radialAxis = new RadialAxis();
         Label label = new Label();
         label.setDisplay(true);
         radialAxis.setLabel(label);
-        chart.setAxes(radialAxis);
+//        chart.setAxes(radialAxis);
 
         RadarSeries radarSeries = new RadarSeries();
         radarSeries.setXField("name");
@@ -111,10 +107,10 @@ public class RadarChartsViewImpl extends Panel implements RadarChartsView {
         radarSeries3.setYField("2009");
         radarSeries3.setShowInLegend(true);
 
-        chart.setSeries(radarSeries, radarSeries2, radarSeries3);
+//        chart.setSeries(radarSeries, radarSeries2, radarSeries3);
         
         add(toolBar);
-        add(chart);
+//        add(chart);
 
     }
 

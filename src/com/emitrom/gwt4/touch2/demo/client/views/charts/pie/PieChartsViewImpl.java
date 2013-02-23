@@ -21,28 +21,23 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.pie;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
-import com.emitrom.touch4j.charts.client.Legend;
 import com.emitrom.touch4j.charts.client.handlers.ItemShowHandler;
 import com.emitrom.touch4j.charts.client.interactions.ChartItem;
-import com.emitrom.touch4j.charts.client.interactions.ItemHighlight;
 import com.emitrom.touch4j.charts.client.interactions.ItemInfo;
-import com.emitrom.touch4j.charts.client.interactions.PieRotate;
-import com.emitrom.touch4j.charts.client.interactions.Reset;
 import com.emitrom.touch4j.charts.client.laf.Label;
 import com.emitrom.touch4j.charts.client.series.PieSeries;
-import com.emitrom.touch4j.charts.client.theme.Theme;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.data.Store;
-import com.emitrom.touch4j.client.laf.Position;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.ui.Button;
 import com.emitrom.touch4j.client.ui.ChartPanel;
 import com.emitrom.touch4j.client.ui.Panel;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class PieChartsViewImpl extends ChartPanel implements PieChartsView {
+public class PieChartsViewImpl extends ChartPanel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;
@@ -60,12 +55,12 @@ public class PieChartsViewImpl extends ChartPanel implements PieChartsView {
         
         final Store store = new Store(ChartsDataUtil.getColumnChartValues(5, 20));
         
-        final Chart chart = new Chart(store);
-        chart.setThemeCls("pie1");
-        chart.setTheme(Theme.DEFAULT);
-        chart.setAnimate(true);
-        chart.setInsetPadding(20);
-        chart.setLegend(new Legend(Position.LEFT));
+//        final Chart chart = new Chart(store);
+//        chart.setThemeCls("pie1");
+//        chart.setTheme(Theme.DEFAULT);
+//        chart.setAnimate(true);
+//        chart.setInsetPadding(20);
+//        chart.setLegend(new Legend(Position.LEFT));
 
         ItemInfo itemInfo = new ItemInfo();
         itemInfo.setGesture("longpress");
@@ -77,7 +72,7 @@ public class PieChartsViewImpl extends ChartPanel implements PieChartsView {
 
             }
         });
-        chart.setInteractions(new PieRotate(), new Reset(), new ItemHighlight(), itemInfo);
+//        chart.setInteractions(new PieRotate(), new Reset(), new ItemHighlight(), itemInfo);
 
         PieSeries pieSeries = new PieSeries();
         pieSeries.setAngleField("data1");
@@ -90,7 +85,7 @@ public class PieChartsViewImpl extends ChartPanel implements PieChartsView {
         label.setField("name");
         pieSeries.setLabel(label);
 
-        chart.setSeries(pieSeries);
+//        chart.setSeries(pieSeries);
         
         Button button = new Button();
         button.setIconCls(TouchIcons.SHUFFLE);
@@ -104,7 +99,7 @@ public class PieChartsViewImpl extends ChartPanel implements PieChartsView {
         });
         
         addButton(button);
-        add(chart);
+//        add(chart);
 
     }
 

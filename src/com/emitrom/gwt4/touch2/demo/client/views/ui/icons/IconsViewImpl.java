@@ -21,9 +21,9 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.icons;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.config.Dock;
-import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Pack;
 import com.emitrom.touch4j.client.ui.Button;
@@ -32,7 +32,7 @@ import com.emitrom.touch4j.client.ui.TabPanel;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class IconsViewImpl extends TabPanel implements IconsView {
+public class IconsViewImpl extends TabPanel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;

@@ -24,13 +24,13 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.overlays;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.data.PickerSlot;
 import com.emitrom.touch4j.client.data.PickerSlotData;
-import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Align;
 import com.emitrom.touch4j.client.layout.Pack;
@@ -46,7 +46,7 @@ import com.emitrom.touch4j.client.ui.Picker;
 import com.emitrom.touch4j.client.ui.Spacer;
 import com.emitrom.touch4j.client.ui.ToolBar;
 
-public class OverlaysViewImpl extends Panel implements OverlaysView {
+public class OverlaysViewImpl extends Panel implements View {
 
 	@SuppressWarnings("unused")
 	private Presenter presenter;

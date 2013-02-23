@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.carousel;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Align;
@@ -28,7 +29,7 @@ import com.emitrom.touch4j.client.layout.VBoxLayout;
 import com.emitrom.touch4j.client.ui.Carousel;
 import com.emitrom.touch4j.client.ui.Panel;
 
-public class CarouselViewImpl extends Panel implements CarouselView {
+public class CarouselViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;

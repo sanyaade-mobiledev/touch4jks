@@ -24,6 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.themes;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.core.CSS;
 import com.emitrom.gwt4.touch2.demo.client.models.themes.ThemeModel;
 import com.emitrom.touch4j.client.core.handlers.dataview.DataViewItemTapHandler;
@@ -40,7 +41,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 
-public class ThemeViewImpl extends Panel implements ThemeView {
+public class ThemeViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;

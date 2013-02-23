@@ -21,11 +21,11 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.scatter;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
 import com.emitrom.touch4j.charts.client.axis.CategoryAxis;
 import com.emitrom.touch4j.charts.client.axis.NumericAxis;
 import com.emitrom.touch4j.charts.client.series.ScatterSeries;
-import com.emitrom.touch4j.charts.client.theme.Theme;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
@@ -40,7 +40,7 @@ import com.emitrom.touch4j.client.ui.Spacer;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class ScatterChartsViewImpl extends Panel implements ScatterChartsView {
+public class ScatterChartsViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;
@@ -76,45 +76,45 @@ public class ScatterChartsViewImpl extends Panel implements ScatterChartsView {
         toolBar.add(new Spacer());
         toolBar.add(button);
 
-        Chart chart = new Chart(store);
-        chart.setTheme(Theme.DEFAULT);
-        chart.setThemeCls("scatter1");
-        chart.setAnimate(true);
+//        Chart chart = new Chart(store);
+//        chart.setTheme(Theme.DEFAULT);
+//        chart.setThemeCls("scatter1");
+//        chart.setAnimate(true);
 
         NumericAxis numericAxis = new NumericAxis();
         numericAxis.setPosition(Position.LEFT);
         numericAxis.setFields("data1", "data2", "data3");
         numericAxis.setTitle("Number of Hits");
-        chart.addAxis(numericAxis);
+//        chart.addAxis(numericAxis);
 
         CategoryAxis categoryAxis = new CategoryAxis();
         categoryAxis.setPosition(Position.BOTTOM);
         categoryAxis.setFields("name");
         categoryAxis.setTitle("Month of the year");
-        chart.addAxis(categoryAxis);
-        chart.drawAxis();
+//        chart.addAxis(categoryAxis);
+//        chart.drawAxis();
 
         ScatterSeries series = new ScatterSeries();
         series.setAxis(Alignment.LEFT, Alignment.BOTTOM);
         series.setXField("name");
         series.setYField("data1");
-        chart.addSeries(series);
+//        chart.addSeries(series);
 
         series = new ScatterSeries();
         series.setAxis(Alignment.LEFT, Alignment.BOTTOM);
         series.setXField("name");
         series.setYField("data2");
-        chart.addSeries(series);
+//        chart.addSeries(series);
 
         series = new ScatterSeries();
         series.setAxis(Alignment.LEFT, Alignment.BOTTOM);
         series.setXField("name");
         series.setYField("data3");
-        chart.addSeries(series);
-        chart.drawSeries();
+//        chart.addSeries(series);
+//        chart.drawSeries();
 
         add(toolBar);
-        add(chart);
+//        add(chart);
 
     }
 

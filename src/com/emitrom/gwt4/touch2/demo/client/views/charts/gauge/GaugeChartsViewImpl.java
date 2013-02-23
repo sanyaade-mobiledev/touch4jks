@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.gauge;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
 import com.emitrom.touch4j.charts.client.Animation;
 import com.emitrom.touch4j.charts.client.axis.GaugeAxis;
@@ -39,7 +40,7 @@ import com.emitrom.touch4j.client.ui.Spacer;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class GaugeChartsViewImpl extends Panel implements GaugeChartsView {
+public class GaugeChartsViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;
@@ -76,27 +77,28 @@ public class GaugeChartsViewImpl extends Panel implements GaugeChartsView {
         toolBar.add(new Spacer());
         toolBar.add(button);
 
-        Chart chart = new Chart(store);
-        Animation animation = new Animation(500, Easing.ELASTIC_IN);
-        chart.setAnimate(animation);
+//        Chart chart = new Chart(store);
+        @SuppressWarnings("unused")
+		Animation animation = new Animation(500, Easing.ELASTIC_IN);
+//        chart.setAnimate(animation);
 
         GaugeAxis gaugeAxis = new GaugeAxis();
         gaugeAxis.setMinimum(0);
         gaugeAxis.setMaximum(100);
         gaugeAxis.setSteps(10);
         gaugeAxis.setMargin(10);
-        chart.addAxis(gaugeAxis);
-        chart.drawAxis();
+//        chart.addAxis(gaugeAxis);
+//        chart.drawAxis();
 
         GaugeSeries gaugeSeries = new GaugeSeries();
         gaugeSeries.setField("data1");
         gaugeSeries.setDonut(55);
         gaugeSeries.setColorSet(new Color("#2582B5"), new Color("#555"));
-        chart.addSeries(gaugeSeries);
-        chart.drawSeries();
+//        chart.addSeries(gaugeSeries);
+//        chart.drawSeries();
 
         add(toolBar);
-        add(chart);
+//        add(chart);
 
     }
 

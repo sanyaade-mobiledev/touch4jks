@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.data.jsonp;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
@@ -37,7 +38,7 @@ import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.jsonp.client.JsonpRequestBuilder;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-public class JsonPViewImpl extends Panel implements JsonPView {
+public class JsonPViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;

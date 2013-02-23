@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.form;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.ui.RankModel;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
@@ -51,7 +52,7 @@ import com.emitrom.touch4j.client.ui.Toggle;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.ui.Url;
 
-public class FormsViewImpl extends TabPanel implements FormsView {
+public class FormsViewImpl extends TabPanel implements View {
 
     @SuppressWarnings("unused")
 	private Presenter presenter;

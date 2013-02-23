@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.buttons;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Align;
 import com.emitrom.touch4j.client.layout.HBoxLayout;
@@ -30,7 +31,7 @@ import com.emitrom.touch4j.client.ui.Button;
 import com.emitrom.touch4j.client.ui.Panel;
 
 
-public class ButtonsViewImpl extends Panel implements ButtonsView {
+public class ButtonsViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
 	private Presenter presenter;

@@ -24,9 +24,9 @@ package com.emitrom.gwt4.touch2.demo.client.views.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.data.DataViewModel;
 import com.emitrom.gwt4.touch2.demo.client.models.navigation.NavigationViewModel;
-import com.emitrom.gwt4.touch2.demo.client.views.data.DataView.Presenter;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPViewPlace;
 import com.emitrom.touch4j.client.core.handlers.dataview.DataViewItemTapHandler;
@@ -40,8 +40,7 @@ import com.emitrom.touch4j.client.ui.Panel;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 
-public class DataViewImpl extends Panel implements
-		com.emitrom.gwt4.touch2.demo.client.views.data.DataView.Presenter {
+public class DataViewImpl extends Panel implements View {
 
 	private Presenter presenter;
 	private GwtRpcViewPlace rpcViewPlace = new GwtRpcViewPlace();

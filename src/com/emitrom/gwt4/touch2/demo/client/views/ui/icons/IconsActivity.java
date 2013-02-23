@@ -22,14 +22,14 @@
 package com.emitrom.gwt4.touch2.demo.client.views.ui.icons;
 
 import com.emitrom.gwt4.touch2.demo.client.activity.KitchenSinkActivity;
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.core.ClientFactory;
 import com.emitrom.gwt4.touch2.demo.client.core.Util;
 import com.emitrom.gwt4.touch2.demo.client.core.events.SourceUpdateEvent;
-import com.emitrom.gwt4.touch2.demo.client.views.ui.icons.IconsView.Presenter;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
-public class IconsActivity extends KitchenSinkActivity implements Presenter {
+public class IconsActivity extends KitchenSinkActivity implements View.Presenter {
 
     public IconsActivity(IconsViewPlace place, ClientFactory clientFactory) {
         this.clientFactory = clientFactory;

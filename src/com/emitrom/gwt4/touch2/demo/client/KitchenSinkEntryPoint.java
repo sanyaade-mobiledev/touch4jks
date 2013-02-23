@@ -34,7 +34,6 @@ import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.TouchEntryPoint;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
-import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.ui.Button;
 import com.emitrom.touch4j.client.ui.LoadMask;

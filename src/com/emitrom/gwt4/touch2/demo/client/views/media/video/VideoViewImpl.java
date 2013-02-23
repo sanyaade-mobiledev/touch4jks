@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.media.video;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.layout.FitLayout;
 import com.emitrom.touch4j.client.ui.MessageBox;
 import com.emitrom.touch4j.client.ui.Panel;
@@ -28,7 +29,7 @@ import com.emitrom.touch4j.client.ui.Video;
 import com.emitrom.touch4j.client.utils.Has;
 import com.google.gwt.core.client.GWT;
 
-public class VideoViewImpl extends Panel implements VideoView {
+public class VideoViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;

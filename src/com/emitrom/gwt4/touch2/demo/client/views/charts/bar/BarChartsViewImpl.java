@@ -21,8 +21,8 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.bar;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
-import com.emitrom.touch4j.charts.client.Animation;
 import com.emitrom.touch4j.charts.client.Legend;
 import com.emitrom.touch4j.charts.client.axis.CategoryAxis;
 import com.emitrom.touch4j.charts.client.axis.NumericAxis;
@@ -30,18 +30,13 @@ import com.emitrom.touch4j.charts.client.handlers.ItemCompareInteractionHandler;
 import com.emitrom.touch4j.charts.client.handlers.ItemShowHandler;
 import com.emitrom.touch4j.charts.client.interactions.ChartItem;
 import com.emitrom.touch4j.charts.client.interactions.ItemCompare;
-import com.emitrom.touch4j.charts.client.interactions.ItemHighlight;
 import com.emitrom.touch4j.charts.client.interactions.ItemInfo;
 import com.emitrom.touch4j.charts.client.interactions.OffsetValue;
-import com.emitrom.touch4j.charts.client.interactions.PanZoom;
-import com.emitrom.touch4j.charts.client.interactions.Reset;
-import com.emitrom.touch4j.charts.client.interactions.ToggleStacked;
 import com.emitrom.touch4j.charts.client.series.BarSeries;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.data.Store;
 import com.emitrom.touch4j.client.fx.layout.card.AnimationType;
-import com.emitrom.touch4j.client.fx.layout.card.Easing;
 import com.emitrom.touch4j.client.laf.Alignment;
 import com.emitrom.touch4j.client.laf.Position;
 import com.emitrom.touch4j.client.laf.UI;
@@ -52,7 +47,7 @@ import com.emitrom.touch4j.client.ui.Panel;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class BarChartsViewImpl extends Panel implements BarChartsView {
+public class BarChartsViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;
@@ -71,12 +66,12 @@ public class BarChartsViewImpl extends Panel implements BarChartsView {
 
     private void initialize() {
 
-        final Chart chart = new Chart(store);
-        chart.setAnimate(new Animation(750, Easing.BOUNCE_OUT));
+//        final Chart chart = new Chart(store);
+//        chart.setAnimate(new Animation(750, Easing.BOUNCE_OUT));
 
         Legend legend = new Legend(Position.RIGHT);
         legend.setLabelFont("20 px Arial");
-        chart.setLegend(legend);
+//        chart.setLegend(legend);
 
         NumericAxis numericAxis = new NumericAxis();
         numericAxis.setPosition(Position.BOTTOM);
@@ -88,7 +83,7 @@ public class BarChartsViewImpl extends Panel implements BarChartsView {
         categoryAxis.setPosition(Position.LEFT);
         categoryAxis.setFields("name");
         categoryAxis.setTitle("Month of the year");
-        chart.setAxes(numericAxis, categoryAxis);
+//        chart.setAxes(numericAxis, categoryAxis);
 
         BarSeries barSeries = new BarSeries();
         barSeries.setXField("name");
@@ -96,7 +91,7 @@ public class BarChartsViewImpl extends Panel implements BarChartsView {
         barSeries.setAxis(Alignment.BOTTOM);
         barSeries.setHighlight(true);
         barSeries.setShowInLegend(true);
-        chart.setSeries(barSeries);
+//        chart.setSeries(barSeries);
 
         ItemCompare itemCompare = new ItemCompare();
         itemCompare.setOffset(new OffsetValue(-10));
@@ -140,8 +135,8 @@ public class BarChartsViewImpl extends Panel implements BarChartsView {
                 panel.setHtml(html);
             }
         });
-        chart.setInteractions(new Reset(), new ToggleStacked(), new PanZoom(), new ItemHighlight(), itemInfo,
-                        itemCompare);
+//        chart.setInteractions(new Reset(), new ToggleStacked(), new PanZoom(), new ItemHighlight(), itemInfo,
+//                        itemCompare);
 
         Button button = new Button();
         button.setIconCls(TouchIcons.SHUFFLE);
@@ -154,7 +149,7 @@ public class BarChartsViewImpl extends Panel implements BarChartsView {
             }
         });
 
-        panel = new ChartPanel("Bar Chart", chart);
+//        panel = new ChartPanel("Bar Chart", chart);
         panel.addButton(button);
 
         add(panel);

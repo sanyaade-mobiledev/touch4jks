@@ -21,15 +21,13 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.area;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
 import com.emitrom.touch4j.charts.client.Legend;
 import com.emitrom.touch4j.charts.client.axis.CategoryAxis;
 import com.emitrom.touch4j.charts.client.axis.NumericAxis;
-import com.emitrom.touch4j.charts.client.interactions.PieRotate;
-import com.emitrom.touch4j.charts.client.interactions.Reset;
 import com.emitrom.touch4j.charts.client.laf.LegendPosition;
 import com.emitrom.touch4j.charts.client.series.AreaSeries;
-import com.emitrom.touch4j.charts.client.theme.Theme;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
@@ -44,7 +42,7 @@ import com.emitrom.touch4j.client.ui.Spacer;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class AreaChartsViewImpl extends Panel implements AreaChartsView {
+public class AreaChartsViewImpl extends Panel implements View {
 
     private Store store = ChartsDataUtil.getStore(5, 20);
 
@@ -80,18 +78,19 @@ public class AreaChartsViewImpl extends Panel implements AreaChartsView {
         toolBar.add(new Spacer());
         toolBar.add(button);
 
-        Chart chart = new Chart(store);
-        chart.setTheme(Theme.DEFAULT);
-        chart.setThemeCls("area1");
-        chart.setAnimate(true);
+//        Chart chart = new Chart(store);
+//        chart.setTheme(Theme.DEFAULT);
+//        chart.setThemeCls("area1");
+//        chart.setAnimate(true);
 
         LegendPosition position = new LegendPosition();
         position.setPortrait(Position.RIGHT);
         position.setLandscape(Position.BOTTOM);
-        Legend legend = new Legend(position);
+        @SuppressWarnings("unused")
+		Legend legend = new Legend(position);
 
-        chart.setLegend(legend);
-        chart.setInteractions(new Reset(), new PieRotate());
+//        chart.setLegend(legend);
+//        chart.setInteractions(new Reset(), new PieRotate());
 
         NumericAxis numericAxis = new NumericAxis();
         numericAxis.setPosition(Position.LEFT);
@@ -99,27 +98,27 @@ public class AreaChartsViewImpl extends Panel implements AreaChartsView {
         numericAxis.setTitle("Number of Hitssss");
         numericAxis.setMinimum(0);
         numericAxis.setAdjustMinimumByMajorUnit(false);
-        chart.addAxis(numericAxis);
+//        chart.addAxis(numericAxis);
 
         CategoryAxis categoryAxis = new CategoryAxis();
         categoryAxis.setPosition(Position.BOTTOM);
         categoryAxis.setFields("name");
         categoryAxis.setTitle("Month of the year");
-        chart.addAxis(categoryAxis);
+//        chart.addAxis(categoryAxis);
 
-        chart.setAxes(numericAxis, categoryAxis);
+//        chart.setAxes(numericAxis, categoryAxis);
 
         AreaSeries areaSeries = new AreaSeries();
         areaSeries.setHighlight(true);
         areaSeries.setAxis(Alignment.LEFT);
         areaSeries.setXField("name");
         areaSeries.setYField("2003", "2004", "2005", "2006", "2007", "2008", "2009");
-        chart.addSeries(areaSeries);
+//        chart.addSeries(areaSeries);
 
-        chart.setSeries(areaSeries);
+//        chart.setSeries(areaSeries);
 
         add(toolBar);
-        add(chart);
+//        add(chart);
 
     }
 

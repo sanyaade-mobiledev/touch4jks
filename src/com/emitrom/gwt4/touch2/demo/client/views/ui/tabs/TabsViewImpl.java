@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.ui.tabs;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.laf.Alignment;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Pack;
@@ -28,7 +29,7 @@ import com.emitrom.touch4j.client.ui.TabItem;
 import com.emitrom.touch4j.client.ui.TabPanel;
 
 
-public class TabsViewImpl extends TabPanel implements TabsView {
+public class TabsViewImpl extends TabPanel implements View {
 
 	@SuppressWarnings("unused")
     private Presenter presenter;

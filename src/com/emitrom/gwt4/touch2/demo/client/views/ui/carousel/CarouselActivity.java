@@ -22,14 +22,14 @@
 package com.emitrom.gwt4.touch2.demo.client.views.ui.carousel;
 
 import com.emitrom.gwt4.touch2.demo.client.activity.KitchenSinkActivity;
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.core.ClientFactory;
 import com.emitrom.gwt4.touch2.demo.client.core.Util;
 import com.emitrom.gwt4.touch2.demo.client.core.events.SourceUpdateEvent;
-import com.emitrom.gwt4.touch2.demo.client.views.ui.carousel.CarouselView.Presenter;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
-public class CarouselActivity extends KitchenSinkActivity implements Presenter {
+public class CarouselActivity extends KitchenSinkActivity implements View.Presenter {
 
     public CarouselActivity(CarouselViewPlace place, ClientFactory clientFactory) {
         this.clientFactory = clientFactory;

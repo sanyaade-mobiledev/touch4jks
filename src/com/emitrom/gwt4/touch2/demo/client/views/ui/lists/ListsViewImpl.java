@@ -24,6 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.lists;
 import java.util.ArrayList;
 import java.util.Date;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.ui.UserModel;
 import com.emitrom.touch4j.client.core.handlers.list.ItemDisclosureHandler;
 import com.emitrom.touch4j.client.data.BaseModel;
@@ -46,7 +47,7 @@ import com.emitrom.touch4j.ux.dataview.pullrefresh.client.PullRefresh;
 import com.emitrom.touch4j.ux.dataview.pullrefresh.client.PullRefreshHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class ListsViewImpl extends TabPanel implements ListsView {
+public class ListsViewImpl extends TabPanel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;

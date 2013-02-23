@@ -23,6 +23,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.editor;
 
 import java.util.ArrayList;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.views.ui.editor.EditorViewImpl.Person;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
@@ -52,7 +53,7 @@ import com.google.gwt.core.client.JsDate;
 import com.google.gwt.editor.client.Editor;
 import com.google.gwt.editor.client.SimpleBeanEditorDriver;
 
-public class EditorViewImpl extends FormPanel implements Editor<Person>, EditorView {
+public class EditorViewImpl extends FormPanel implements Editor<Person>, View {
 
 	public interface Driver extends SimpleBeanEditorDriver<Person, EditorViewImpl> {
 		

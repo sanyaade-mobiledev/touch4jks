@@ -24,6 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.nestedlists;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.core.handlers.component.RenderChangeHandler;
 import com.emitrom.touch4j.client.data.TreeModel;
 import com.emitrom.touch4j.client.data.TreeStore;
@@ -32,7 +33,7 @@ import com.emitrom.touch4j.client.ui.Container;
 import com.emitrom.touch4j.client.ui.NestedListDataView;
 import com.emitrom.touch4j.client.ui.Panel;
 
-public class NestedListsViewImpl extends Panel implements NestedListsView {
+public class NestedListsViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
 	private Presenter presenter;

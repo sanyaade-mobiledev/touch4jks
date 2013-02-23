@@ -24,6 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.animations;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.animation.AnimationViewModel;
 import com.emitrom.gwt4.touch2.demo.client.views.AppPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.fade.FadeViewPlace;
@@ -41,7 +42,7 @@ import com.emitrom.touch4j.client.ui.Panel;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 
-public class AnimationViewImpl extends Panel implements AnimationView {
+public class AnimationViewImpl extends Panel implements View {
 
 	private Presenter presenter;
 	

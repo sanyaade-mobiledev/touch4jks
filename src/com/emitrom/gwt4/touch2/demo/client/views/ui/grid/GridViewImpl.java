@@ -23,6 +23,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.grid;
 
 import java.util.ArrayList;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.ui.CompanyModel;
 import com.emitrom.touch4j.client.core.config.XType;
 import com.emitrom.touch4j.client.core.handlers.dataview.DataViewSelectHandler;
@@ -38,7 +39,7 @@ import com.emitrom.touch4j.ux.grid.client.core.GridColumnEditor;
 import com.emitrom.touch4j.ux.grid.client.core.GridColumnRenderer;
 import com.emitrom.touch4j.ux.grid.client.core.GridFeature;
 
-public class GridViewImpl extends Panel implements GridView {
+public class GridViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;
@@ -55,7 +56,8 @@ public class GridViewImpl extends Panel implements GridView {
         this.presenter = presenter;
     }
 
-    private void initialize() {
+    @SuppressWarnings("deprecation")
+	private void initialize() {
 
         ArrayList<GridColumn> columns = new ArrayList<GridColumn>();
 

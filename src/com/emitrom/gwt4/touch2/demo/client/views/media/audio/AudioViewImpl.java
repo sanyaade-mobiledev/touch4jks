@@ -21,6 +21,7 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.media.audio;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.laf.UI;
@@ -34,7 +35,7 @@ import com.emitrom.touch4j.client.ui.Panel;
 import com.emitrom.touch4j.client.utils.Has;
 import com.emitrom.touch4j.client.utils.OS;
 
-public class AudioViewImpl extends Panel implements AudioView {
+public class AudioViewImpl extends Panel implements View {
 
     @SuppressWarnings("unused")
     private Presenter presenter;

@@ -24,6 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.charts;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartViewModel;
 import com.emitrom.gwt4.touch2.demo.client.views.charts.area.AreaChartsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.charts.bar.BarChartsViewPlace;
@@ -44,7 +45,7 @@ import com.emitrom.touch4j.client.ui.Panel;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 
-public class ChartsViewImpl extends Panel implements ChartsView {
+public class ChartsViewImpl extends Panel implements View {
 
     private Presenter presenter;
     private AreaChartsViewPlace areaViewPlace = new AreaChartsViewPlace();

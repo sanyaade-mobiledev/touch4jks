@@ -21,8 +21,8 @@
  ******************************************************************************/
 package com.emitrom.gwt4.touch2.demo.client.views.charts.column;
 
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.charts.ChartsDataUtil;
-import com.emitrom.touch4j.charts.client.Animation;
 import com.emitrom.touch4j.charts.client.axis.CategoryAxis;
 import com.emitrom.touch4j.charts.client.axis.NumericAxis;
 import com.emitrom.touch4j.charts.client.laf.BarAttribute;
@@ -36,7 +36,6 @@ import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
 import com.emitrom.touch4j.client.data.BaseModel;
 import com.emitrom.touch4j.client.data.Store;
 import com.emitrom.touch4j.client.draw.Sprite;
-import com.emitrom.touch4j.client.fx.layout.card.Easing;
 import com.emitrom.touch4j.client.laf.Color;
 import com.emitrom.touch4j.client.laf.Position;
 import com.emitrom.touch4j.client.laf.RGB;
@@ -48,7 +47,7 @@ import com.emitrom.touch4j.client.ui.Spacer;
 import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.utils.TouchIcons;
 
-public class ColumnChartsViewImpl extends Panel implements ColumnChartsView {
+public class ColumnChartsViewImpl extends Panel implements View {
 
     private Store store = ChartsDataUtil.getStore(5, 20);
 
@@ -67,8 +66,8 @@ public class ColumnChartsViewImpl extends Panel implements ColumnChartsView {
 
     private void initialize() {
 
-        Chart chart = new Chart(store);
-        chart.setAnimate(new Animation(750, Easing.BOUNCE_OUT));
+//        Chart chart = new Chart(store);
+//        chart.setAnimate(new Animation(750, Easing.BOUNCE_OUT));
 
         Gradient gradient1 = new Gradient("v-1", 0);
         gradient1.setStops(new RGB(212, 40, 40), new RGB(117, 14, 14));
@@ -93,7 +92,7 @@ public class ColumnChartsViewImpl extends Panel implements ColumnChartsView {
         gradient5.setAngle(0);
         gradient5.setStops(new RGB(187, 45, 222), new RGB(85, 10, 103));
 
-        chart.setGradients(gradient1, gradient2, gradient3, gradient4, gradient5);
+//        chart.setGradients(gradient1, gradient2, gradient3, gradient4, gradient5);
 
         NumericAxis axis = new NumericAxis();
         axis.setPosition(Position.LEFT);
@@ -108,7 +107,7 @@ public class ColumnChartsViewImpl extends Panel implements ColumnChartsView {
         axis2.setFields("name");
         axis2.setTitle("Month of the Year");
 
-        chart.setAxes(axis, axis2);
+//        chart.setAxes(axis, axis2);
 
         final Color[] colors = {gradient1, gradient2, gradient3, gradient4, gradient5};
 
@@ -127,7 +126,7 @@ public class ColumnChartsViewImpl extends Panel implements ColumnChartsView {
                 attributes.setFill(colors[index % colors.length]);
             }
         });
-        chart.setSeries(serie);
+//        chart.setSeries(serie);
 
         ToolBar toolBar = new ToolBar();
         toolBar.setDocked(Dock.BOTTOM);
@@ -146,7 +145,7 @@ public class ColumnChartsViewImpl extends Panel implements ColumnChartsView {
         toolBar.add(reloadButton);
 
         add(toolBar);
-        add(chart);
+//        add(chart);
 
     }
 

@@ -22,6 +22,7 @@
 package com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc;
 
 import com.emitrom.gwt4.touch2.demo.client.KitchenSinkServiceAsync;
+import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.core.Util;
 import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.config.Dock;
@@ -36,7 +37,7 @@ import com.emitrom.touch4j.client.ui.ToolBar;
 import com.emitrom.touch4j.client.ui.ViewPort;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-public class GwtRpcViewImpl extends Panel implements GwtRpcView {
+public class GwtRpcViewImpl extends Panel implements View {
 
     private GwtRpcActivity presenter;
     private Button button;
