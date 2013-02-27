@@ -37,24 +37,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideLeftViewP
 import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideRightViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideUpViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.ChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.ChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.area.AreaChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.area.AreaChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.bar.BarChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.bar.BarChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.column.ColumnChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.column.ColumnChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.gauge.GaugeChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.gauge.GaugeChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.line.LineChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.line.LineChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.pie.PieChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.pie.PieChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.radar.RadarChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.radar.RadarChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.scatter.ScatterChartsActivity;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.scatter.ScatterChartsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataActivity;
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcActivity;
@@ -172,24 +154,6 @@ public class AppActivityMapper implements ActivityMapper {
             return new FlipActivity((FlipViewPlace) place, clientFactory);
         if (place instanceof PopViewPlace)
             return new PopActivity((PopViewPlace) place, clientFactory);
-        if (place instanceof ChartsViewPlace)
-            return new ChartsActivity((ChartsViewPlace) place, clientFactory);
-        if (place instanceof AreaChartsViewPlace)
-            return new AreaChartsActivity((AreaChartsViewPlace) place, clientFactory);
-        if (place instanceof BarChartsViewPlace)
-            return new BarChartsActivity((BarChartsViewPlace) place, clientFactory);
-        if (place instanceof ColumnChartsViewPlace)
-            return new ColumnChartsActivity((ColumnChartsViewPlace) place, clientFactory);
-        if (place instanceof GaugeChartsViewPlace)
-            return new GaugeChartsActivity((GaugeChartsViewPlace) place, clientFactory);
-        if (place instanceof LineChartsViewPlace)
-            return new LineChartsActivity((LineChartsViewPlace) place, clientFactory);
-        if (place instanceof PieChartsViewPlace)
-            return new PieChartsActivity((PieChartsViewPlace) place, clientFactory);
-        if (place instanceof RadarChartsViewPlace)
-            return new RadarChartsActivity((RadarChartsViewPlace) place, clientFactory);
-        if (place instanceof ScatterChartsViewPlace)
-            return new ScatterChartsActivity((ScatterChartsViewPlace) place, clientFactory);
         if (place instanceof EditorViewPlace)
             return new EditorActivity((EditorViewPlace) place, clientFactory);
         

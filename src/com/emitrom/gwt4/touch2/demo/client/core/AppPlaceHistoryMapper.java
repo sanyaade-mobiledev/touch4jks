@@ -30,15 +30,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideLeftViewP
 import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideRightViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideUpViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.ChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.area.AreaChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.bar.BarChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.column.ColumnChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.gauge.GaugeChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.line.LineChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.pie.PieChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.radar.RadarChartsViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.scatter.ScatterChartsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPViewPlace;
@@ -103,17 +94,6 @@ import com.google.gwt.place.shared.WithTokenizers;
                 DataViewPlace.Tokenizer.class, 
                 GwtRpcViewPlace.Tokenizer.class, 
                 JsonPViewPlace.Tokenizer.class,
-                
-                // Charts
-                ChartsViewPlace.Tokenizer.class, 
-                LineChartsViewPlace.Tokenizer.class,
-                AreaChartsViewPlace.Tokenizer.class, 
-                BarChartsViewPlace.Tokenizer.class,
-                ColumnChartsViewPlace.Tokenizer.class, 
-                GaugeChartsViewPlace.Tokenizer.class,
-                PieChartsViewPlace.Tokenizer.class, 
-                RadarChartsViewPlace.Tokenizer.class,
-                ScatterChartsViewPlace.Tokenizer.class, 
                 
                 })
 

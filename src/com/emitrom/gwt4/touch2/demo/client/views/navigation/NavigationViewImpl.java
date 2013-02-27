@@ -28,7 +28,6 @@ import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.gwt4.touch2.demo.client.models.navigation.NavigationViewModel;
 import com.emitrom.gwt4.touch2.demo.client.views.AppPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.AnimationViewPlace;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.ChartsViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.media.MediaViewPlace;
 import com.emitrom.gwt4.touch2.demo.client.views.themes.ThemeViewPlace;
@@ -52,7 +51,6 @@ public class NavigationViewImpl extends Panel implements View {
     private DataViewPlace dataViewPlace = new DataViewPlace();
     private AppPlace themeViewPlace = new ThemeViewPlace();
     private AppPlace mediaViewPlace = new MediaViewPlace();
-    private AppPlace chartsPlace = new ChartsViewPlace();
 
     public NavigationViewImpl() {
         setLayout(new FitLayout());
@@ -98,7 +96,6 @@ public class NavigationViewImpl extends Panel implements View {
         modelNames.add(dataViewPlace.getToken());
         modelNames.add(mediaViewPlace.getToken());
         modelNames.add(themeViewPlace.getToken());
-        modelNames.add(chartsPlace.getToken());
 
         String[] list = modelNames.toArray(new String[0]);
 
@@ -127,9 +124,6 @@ public class NavigationViewImpl extends Panel implements View {
                 break;
             case 4:
                 presenter.goTo(themeViewPlace);
-                break;
-            case 5:
-                presenter.goTo(chartsPlace);
                 break;
 
             default:

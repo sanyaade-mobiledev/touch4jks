@@ -8,18 +8,21 @@
     <inherits name='com.google.web.bindery.autobean.AutoBean' />
     
 	<inherits name="com.emitrom.touch4j.Touch4j" />
-    <inherits name="com.emitrom.touch4j.charts.Charts" />
+<!--
     <inherits name="com.emitrom.touch4j.ux.grid.Grid" />
+    -->    	
+    
     <inherits name="com.emitrom.touch4j.ux.dataview.pullrefresh.PullRefresh" />
+    
     <inherits name="com.emitrom.touch4j.ux.rating.Rating" />
-    	
+     	
 	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
 	<set-property name="gwt.logging.logLevel" value="SEVERE" />
 	<set-property name="gwt.logging.enabled" value="TRUE" />
 	<set-property name="gwt.logging.consoleHandler" value="ENABLED" />
 	<set-property name="gwt.logging.systemHandler" value="ENABLED" />
 
-	<set-property name="user.agent" value="safari" />
+	<!-- <set-property name="user.agent" value="safari" /> -->
 
 	<!-- Specify the app entry point class. -->
 	<entry-point class='com.emitrom.gwt4.touch2.demo.client.KitchenSinkEntryPoint' />

@@ -28,15 +28,6 @@ import com.emitrom.gwt4.touch2.demo.client.views.animations.fade.FadeViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.flip.FlipViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.pop.PopViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.animations.slide.SlideViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.ChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.area.AreaChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.bar.BarChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.column.ColumnChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.gauge.GaugeChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.line.LineChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.pie.PieChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.radar.RadarChartsViewImpl;
-import com.emitrom.gwt4.touch2.demo.client.views.charts.scatter.ScatterChartsViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.data.DataViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.data.gwtrpc.GwtRpcViewImpl;
 import com.emitrom.gwt4.touch2.demo.client.views.data.jsonp.JsonPViewImpl;
@@ -88,15 +79,6 @@ public class Util {
     private static DataViewImpl dataView;
     private static GwtRpcViewImpl gwtrpcView;
     private static JsonPViewImpl jsonpView;
-    private static ChartsViewImpl chartsView;
-    private static LineChartsViewImpl lineChartView;
-    private static AreaChartsViewImpl areaChartView;
-    private static BarChartsViewImpl barChartView;
-    private static ColumnChartsViewImpl columnChartView;
-    private static GaugeChartsViewImpl gaugeChartView;
-    private static PieChartsViewImpl pieChartView;
-    private static RadarChartsViewImpl radarChartView;
-    private static ScatterChartsViewImpl scatterChartView;
     private static EditorViewImpl editorsView;
 
     private Util() {
@@ -334,69 +316,6 @@ public class Util {
             jsonpView = new JsonPViewImpl();
         }
         return jsonpView;
-    }
-    
-    public static ChartsViewImpl getChartsView() {
-        if (chartsView == null) {
-            chartsView = new ChartsViewImpl();
-        }
-        return chartsView;
-    }
-    
-    public static LineChartsViewImpl getLineChartsView() {
-        if (lineChartView == null) {
-            lineChartView = new LineChartsViewImpl();
-        }
-        return lineChartView;
-    }
-
-    public static AreaChartsViewImpl getAreaChartsView() {
-        if (areaChartView == null) {
-            areaChartView = new AreaChartsViewImpl();
-        }
-        return areaChartView;
-    }
-
-    public static BarChartsViewImpl getBarChartsView() {
-        if (barChartView == null) {
-            barChartView = new BarChartsViewImpl();
-        }
-        return barChartView;
-    }
-    
-    public static ColumnChartsViewImpl getColumnChartsView() {
-        if (columnChartView == null) {
-            columnChartView = new ColumnChartsViewImpl();
-        }
-        return columnChartView;
-    }
-    
-    public static GaugeChartsViewImpl getGaugeChartsView() {
-        if (gaugeChartView == null) {
-            gaugeChartView = new GaugeChartsViewImpl();
-        }
-        return gaugeChartView;
-    }
-    
-    public static PieChartsViewImpl getPieChartsView() {
-        if (pieChartView == null) {
-            pieChartView = new PieChartsViewImpl();
-        }
-        return pieChartView;
-    }
-    
-    public static RadarChartsViewImpl getRadarChartsView() {
-        if (radarChartView == null) {
-            radarChartView = new RadarChartsViewImpl();
-        }
-        return radarChartView;
-    }
-    
-    public static ScatterChartsViewImpl getScatterChartsView() {
-        if (scatterChartView == null) {
-            scatterChartView = new ScatterChartsViewImpl();
-        }
-        return scatterChartView;
     }
     
     public static EditorViewImpl getEditorsView() {
