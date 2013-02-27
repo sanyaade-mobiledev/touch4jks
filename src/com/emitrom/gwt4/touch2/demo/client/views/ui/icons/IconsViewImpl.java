@@ -24,6 +24,7 @@ package com.emitrom.gwt4.touch2.demo.client.views.ui.icons;
 import com.emitrom.gwt4.touch2.demo.client.activity.View;
 import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.config.Dock;
+import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.Pack;
 import com.emitrom.touch4j.client.ui.Button;
@@ -52,12 +53,11 @@ public class IconsViewImpl extends TabPanel implements View {
         
         topToolBar.setUi(UI.LIGHT);
         topToolBar.setDocked(Dock.TOP);
-        topToolBar.setHeight(47);
         topToolBar.getLayout().setPack(Pack.CENTER);
+        topToolBar.setScrollable(true);
 
         Scroller toolBarscroller = new Scroller();
-        // TODO
-//        toolBarscroller.setDirection(Direction.HORIZONTAL);
+        toolBarscroller.setDirection(Direction.HORIZONTAL);
 
         topToolBar.setScroller(toolBarscroller);
 
@@ -157,14 +157,13 @@ public class IconsViewImpl extends TabPanel implements View {
         button.setIconCls(TouchIcons.TRASH);
         topToolBar.add(button);
 
-        add(topToolBar);
-
+        setToolBar(topToolBar);
+        
         /**
          * Bottom Tab Items
          */
         Scroller tabBarscroller = new Scroller();
-        // TODO
-//        tabBarscroller.setDirection(Direction.HORIZONTAL);
+        tabBarscroller.setDirection(Direction.HORIZONTAL);
 
         getTabBar().getLayout().setPack(Pack.CENTER);
         getTabBar().setScroller(tabBarscroller);
