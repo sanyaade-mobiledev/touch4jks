@@ -29,6 +29,7 @@ import com.emitrom.touch4j.client.core.EventObject;
 import com.emitrom.touch4j.client.core.Scroller;
 import com.emitrom.touch4j.client.core.config.Dock;
 import com.emitrom.touch4j.client.core.handlers.button.TapHandler;
+import com.emitrom.touch4j.client.laf.Direction;
 import com.emitrom.touch4j.client.laf.UI;
 import com.emitrom.touch4j.client.layout.FitLayout;
 import com.emitrom.touch4j.client.ui.Button;
@@ -63,12 +64,11 @@ public class ToolBarViewImpl extends Panel implements View {
         innerPanel.setHtml("Pick a button, any button. <br /><small>By using SASS, all of the buttons on this screen can be restyled dynamically. The only images used are masks.</small>");
         
         ToolBar toolBar = new ToolBar();
-        toolBar.setUi(UI.LIGHT);
+        toolBar.setUi(UI.NEUTRAL);
         toolBar.setDocked(Dock.TOP);
         
         Scroller scroller = new Scroller();
-        // TODO Implement enum for core
-//        scroller.setDirection(Direction.HORIZONTAL);
+        scroller.setDirection(Direction.HORIZONTAL);
         
         toolBar.setScroller(scroller);
         

@@ -168,7 +168,7 @@ public class IconsViewImpl extends TabPanel implements View {
         getTabBar().getLayout().setPack(Pack.CENTER);
         getTabBar().setScroller(tabBarscroller);
         getTabBar().setDocked(Dock.BOTTOM);
-
+        
         TabItem item = new TabItem("BookMarks");
         item.setIconCls(TouchIcons.BOOKMARKS);
         item.setCls("card containers green");
